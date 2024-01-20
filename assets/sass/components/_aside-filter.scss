@@ -1,0 +1,182 @@
+// | -------------------------------------------------------------
+// | Aside filter
+// | -------------------------------------------------------------
+
+@use "../base/sizes" as *;
+@use "../base/space" as *;
+@use "../base/border" as *;
+@use "../base/breakpoint" as *;
+
+$color-science-blue: var(--color-science-blue);
+$color-titan-white: var(--color-titan-white);
+$color-black: var(--color-black);
+$color-white: var(--color-white);
+$radius-large: var(--radius-large);
+
+.aside-filter {
+  width: 230px;
+  max-height: 576px;
+  padding: 30px;
+  background-color: $color-titan-white;
+  border-radius: $radius-large;
+
+  &__group {
+    margin-bottom: $space-15;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    label {
+      @include size-10;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.input-custom {
+  height: 40px;
+  padding: 0 $space-15;
+  font-family: "Poppins", sans-serif;
+  @include size-12;
+  color: $color-black;
+  @include border-small($color-white);
+  border-radius: $radius-large;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  input {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    flex: 1;
+    cursor: pointer;
+  }
+
+  option {
+    padding: $space-15;
+    background-color: $color-black;
+    font-family: "Poppins", sans-serif;
+    color: $color-white;
+  }
+}
+
+.custom-select__wrapper {
+  position: relative;
+}
+
+.custom-select__chevrons .fa-chevron-up {
+  display: none;
+}
+
+.custom-select__wrapper.active .custom-select__chevrons .fa-chevron-down {
+  display: none;
+}
+
+.custom-select__wrapper.active .custom-select__chevrons .fa-chevron-up {
+  display: block;
+}
+
+.custom-select__search {
+  height: 40px;
+  margin-bottom: $space-15;
+  padding: 0 $space-15;
+  background-color: $color-white;
+  @include border-small($color-white);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+
+  input {
+    padding-right: $space-15;
+    background-color: transparent;
+    @include size-12;
+    border: none;
+    flex: 1;
+  }
+
+  i {
+    color: $color-science-blue;
+  }
+}
+
+.custom-select__content {
+  width: 90%;
+  margin-top: 50px;
+  padding: $space-15;
+  background-color: $color-black;
+  @include size-12;
+  color: $color-white;
+  border-radius: var(--radius-large);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 1;
+}
+
+.custom-select__wrapper.active .custom-select__content {
+  display: block;
+}
+
+.custom-select__heading {
+  margin: 15px 0 11px 0;
+  @include size-12;
+}
+
+.custom-select__options {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.custom-select__option {
+  font-family: "Poppins", sans-serif;
+  @include size-12;
+  line-height: 1.5;
+  font-weight: 400;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-science-blue;
+  }
+}
+
+.custom-select__option.selected {
+  font-weight: 700;
+}
+
+// custom date
+.custom-select__date-wrapper {
+  display: none;
+  gap: 10px;
+}
+
+.custom-select__date-input {
+  max-width: 100%;
+  width: 110px;
+  height: 40px;
+  margin-top: 10px;
+  padding: 0 $space-15;
+  background-color: $color-white;
+  @include border-small($color-white);
+  border-radius: var(--radius-large);
+  display: flex;
+  align-items: center;
+
+  input {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: transparent;
+    color: $color-black;
+    border: none;
+    flex: 1;
+    cursor: pointer;
+
+    &::placeholder {
+      color: $color-black;
+    }
+  }
+}

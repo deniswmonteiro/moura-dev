@@ -1,0 +1,13 @@
+// | -------------------------------------------------------------
+// | Container
+// | -------------------------------------------------------------
+
+@use "../base/breakpoint" as *;
+
+.container {
+  padding: 0 95px;
+
+  @include breakpoint(medium) {
+    padding: 0 1rem;
+  }
+}

@@ -1,0 +1,9 @@
+// | -------------------------------------------------------------
+// | Transitions
+// | -------------------------------------------------------------
+
+@mixin transition($property, $delay, $timing-function) {
+  transition-property: $property;
+  transition-delay: $delay;
+  transition-timing-function: $timing-function;
+}

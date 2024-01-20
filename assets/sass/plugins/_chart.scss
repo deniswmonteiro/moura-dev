@@ -1,0 +1,72 @@
+// | -------------------------------------------------------------
+// | Chart.js
+// | -------------------------------------------------------------
+
+@use "../base/space" as *;
+@use "../base/sizes" as *;
+@use "../base/border" as *;
+@use "../base/transitions" as *;
+
+$color-black: var(--color-black);
+$color-white: var(--color-white);
+
+.chart-tooltip-custom {
+  width: 125px;
+  height: 70px;
+  padding: $space-15;
+  background-color: $color-black;
+  color: $color-white;
+  border-radius: calc(var(--radius-small) + 1px);
+  opacity: 1;
+  pointer-events: none;
+  transform: translate(-50%, 0);
+  @include transition(all, 0.1s, ease);
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-right: 12px solid $color-black;
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-10px);
+  }
+}
+
+.chart-tooltip-custom__list {
+  display: flex;
+  flex-direction: column;
+
+  li {
+    p {
+      color: $color-white;
+      font-weight: 100;
+    }
+  }
+}
+
+.chart-tooltip-custom__item-block {
+  display: block;
+}
+
+.chart-tooltip-custom__color-square {
+  width: 8px;
+  height: 8px;
+  margin-right: 5px;
+  display: inline-block;
+  font-size: 8px;
+  color: $color-white;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 50%;
+}
+
+.chart-tooltip-custom__item-value {
+  padding-left: 15px;
+  @include size-12;
+}

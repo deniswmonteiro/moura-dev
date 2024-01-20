@@ -1,0 +1,76 @@
+// | -------------------------------------------------------------
+// | Page default
+// | -------------------------------------------------------------
+
+@use "../base/space" as *;
+@use "../base/sizes" as *;
+
+$color-white: var(--color-white);
+
+.page-default__wrapper {
+  height: 100vh;
+  background-color: $color-white;
+  display: flex;
+}
+
+.page-default__column {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-default__content {
+  max-width: 100%;
+  width: 290px;
+}
+
+.page-default__logo {
+  margin-bottom: $space-30;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .icon {
+    width: auto;
+    height: auto;
+    margin: $space-60 0 $space-15 0;
+  }
+
+  h1 {
+    @include size-24;
+    color: var(--color-black);
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .description {
+    margin-top: $space-15;
+    @include size-16;
+    color: var(--color-black);
+    line-height: 1.5;
+  }
+
+  p {
+    margin-top: $space-30;
+    @include size-12;
+    color: var(--color-ironside-grey);
+  }
+
+  a {
+    margin-top: $space-60;
+  }
+}
+
+.page-default__background {
+  width: 60%;
+  background-color: var(--color-white);
+  background-image: url(../images/bg.jpg);
+  background-size: 160%;
+  background-position: left;
+  background-repeat: no-repeat;
+}

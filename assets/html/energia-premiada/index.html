@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+<head>
+	{INCLUDE_CABECALHO}
+	<title itemprop="name">Energia Premiada - Sell In</title>
+	<link rel="canonical" href="{URL}/energia-premiada" itemprop="url" />
+	<meta name="description" content="{OBJ_METADATA->DESCRIPTION}" />
+	<meta name="keywords" content="{OBJ_METADATA->KEYWORD}" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="{URL_IMG_SHARE}" />
+	<meta name="twitter:title" content="{OBJ_METADATA->TITLE}" />
+	<meta name="twitter:description" content="{OBJ_METADATA->DESCRIPTION}" />
+	<meta property="og:locale" content="PT_BR" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="{OBJ_METADATA->TITLE}" />
+	<meta property="og:description" content="{OBJ_METADATA->DESCRIPTION}" />
+	<meta property="og:site_name" content="{PROJECT_NAME}" />
+	<meta property="og:url" content="{URL}/energia-premiada" />
+	<meta property="og:image" content="{URL_IMG_SHARE}" />
+</head>
+<body>
+	{INCLUDE_TOPO}
+	<main class="main">
+		<!-- NAVBAR -->
+		<nav class="header__navbar">
+			<div class="header__navbar-title">
+				<h2>Energia premiada</h2>
+			</div>
+			<div class="header__navbar-wrapper">
+				<ul class="header__navbar-list">
+					<li>
+						<a class="active" href="javascript:;">Sell in</a>
+					</li>
+					<li>
+						<a href="{URL}/energia-premiada/sell-out">Sell out</a>
+					</li>
+					<li>
+						<a href="{URL}/energia-premiada/participantes">Participantes</a>
+					</li>
+					<li>
+						<a href="{URL}/energia-premiada/premiacao">Premiação</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- END NAVBAR -->
+		<div class="container">
+			<div class="content">
+				<!-- CUMULATIVE SALES -->
+				<div class="grid-wrapper">
+					<div class="grid-wrapper__content flex-50">
+						<div>
+							<div class="grid-wrapper__heading">
+								<h2>Vendas acumuladas</h2>
+								<p>
+									Somatória de baterias vendidas para os clientes que participam
+									do programa no período selecionado
+								</p>
+							</div>
+							<div class="wrapper-comparison">
+								<div class="wrapper-comparison__content">
+									<div class="wrapper-comparison__date">
+										<span>Jan/23</span>
+										<i>></i>
+										<span>Ago/23</span>
+									</div>
+									<div class="wrapper-comparison__value">
+										<span class="color-lighting-yellow">1.693.451</span>
+									</div>
+								</div>
+								<div class="wrapper-comparison__content">
+									<div class="wrapper-comparison__date">
+										<span>Jan/22</span>
+										<i>></i>
+										<span>Ago/22</span>
+									</div>
+									<div class="wrapper-comparison__value">
+										<span class="color-lemon-grass">1.208.395</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<!-- CHART -->
+							<div class="grid-wrapper__chart">
+								<canvas id="chart-cumulative-sales"></canvas>
+							</div>
+							<!-- END CHART -->
+							
+							<div class="grid-wrapper__representation">
+								<div class="grid-wrapper__representation-title">
+									<h3>
+										Representatividade em relação ao total de vendas da base no
+										período selecionado
+									</h3>
+								</div>
+								<!-- CHART REPRESETATION -->
+								<div class="grid-wrapper__chart-representation">
+									<canvas id="chart-representation-1"></canvas>
+								</div>
+								<!-- END CHART REPRESETATION -->
+							</div>
+						</div>
+					</div>
+					<!-- END CUMULATIVE SALES -->
+					<!-- ACTIVE WALLET -->
+					<div class="grid-wrapper__content flex-50">
+						<div>
+							<div class="grid-wrapper__heading">
+								<h2>Carteira ativa*</h2>
+								<p>
+									Quantidade de clientes que participam do programa na data mais
+									recente do período selecionado
+								</p>
+							</div>
+							<div class="wrapper-comparison">
+								<div class="wrapper-comparison__content">
+									<div class="wrapper-comparison__date">
+										<span>Ago/23</span>
+									</div>
+									<div class="wrapper-comparison__value">
+										<span class="color-lighting-yellow">4.835</span>
+									</div>
+								</div>
+								<div class="wrapper-comparison__content">
+									<div class="wrapper-comparison__date">
+										<span>Ago/22</span>
+									</div>
+									<div class="wrapper-comparison__value">
+										<span class="color-lemon-grass">-</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="wrapper-comparison__legend">
+								<em class="text-italic">*Dados a partir de OUT/22</em>
+							</div>
+							<!-- CHART -->
+							<div class="grid-wrapper__chart">
+								<canvas id="chart-wallet-active"></canvas>
+							</div>
+							<!-- END CHART -->
+							<div class="grid-wrapper__representation">
+								<div class="grid-wrapper__representation-title">
+									<h3>
+										Representatividade em relação ao total de clientes da base
+										no mês mais recente do período selecionado
+									</h3>
+								</div>
+								<!-- GRAPHIC -->
+								<div class="grid-wrapper__chart-representation">
+									<canvas id="chart-representation-2"></canvas>
+								</div>
+								<!-- END GRAPHIC -->
+							</div>
+						</div>
+					</div>
+					<!-- END ACTIVE WALLET -->
+					<!-- SALES VOLUMES -->
+					<div class="grid-wrapper__content flex-100">
+						<div class="grid-wrapper__heading">
+							<h2>Crescimento do volume de vendas</h2>
+							<p>
+								Evolução do total de vendas no período selecionado comparado
+								ao mesmo período do ano anterior
+							</p>
+						</div>
+						<div class="wrapper-participants">
+							<div class="wrapper-participants__content">
+								<div class="wrapper-participants__content-wrapper">
+									<div class="wrapper-participants__heading">
+										<h3>Participantes do programa</h3>
+									</div>
+									<div class="wrapper-participants__comparison">
+										<div class="wrapper-participants__date">
+											<span>Jan/23</span>
+											<i>></i>
+											<span>Ago/23</span>
+										</div>
+										<div class="wrapper-participants__value">
+											<span class="color-lighting-yellow">1.693.451</span>
+										</div>
+									</div>
+									<div class="wrapper-participants__comparison">
+										<div class="wrapper-participants__date">
+											<span>Jan/22</span>
+											<i>></i>
+											<span>Ago/22</span>
+										</div>
+										<div class="wrapper-participants__value">
+											<span class="color-lemon-grass">168.395</span>
+										</div>
+									</div>
+								</div>
+								<div class="wrapper-participants__result">
+									<div
+										class="wrapper-participants__result-arrow wrapper-participants__result-arrow-yellow">
+									</div>
+									<div class="wrapper-participants__result-percentage">
+										<span>1.058%</span>
+									</div>
+								</div>
+							</div>
+							<div class="wrapper-participants__content">
+								<div class="wrapper-participants__content-wrapper">
+									<div class="wrapper-participants__heading">
+										<h3>Não participantes</h3>
+									</div>
+									<div class="wrapper-participants__comparison">
+										<div class="wrapper-participants__date">
+											<span>Jan/23</span>
+											<i>></i>
+											<span>Ago/23</span>
+										</div>
+										<div class="wrapper-participants__value">
+											<span class="color-rosso-corsa">808.395</span>
+										</div>
+									</div>
+									<div class="wrapper-participants__comparison">
+										<div class="wrapper-participants__date">
+											<span>Jan/22</span>
+											<i>></i>
+											<span>Ago/22</span>
+										</div>
+										<div class="wrapper-participants__value">
+											<span class="color-lemon-grass">693.451</span>
+										</div>
+									</div>
+								</div>
+								<div class="wrapper-participants__result">
+									<div
+										class="wrapper-participants__result-arrow wrapper-participants__result-arrow-red">
+									</div>
+									<div class="wrapper-participants__result-percentage">
+										<span>11%</span>
+									</div>
+								</div>
+							</div>
+							<div class="wrapper-participants__content">
+								<div class="wrapper-participants__content-wrapper">
+									<div class="wrapper-participants__heading">
+										<h3>Todos os clientes da base</h3>
+									</div>
+									<div class="wrapper-participants__comparison">
+										<div class="wrapper-participants__date">
+											<span>Jan/23</span>
+											<i>></i>
+											<span>Ago/23</span>
+										</div>
+										<div class="wrapper-participants__value">
+											<span class="color-lighting-yellow">2.493.451</span>
+										</div>
+									</div>
+									<div class="wrapper-participants__comparison">
+										<div class="wrapper-participants__date">
+											<span>Jan/22</span>
+											<i>></i>
+											<span>Ago/22</span>
+										</div>
+										<div class="wrapper-participants__value">
+											<span class="color-lemon-grass">808.395</span>
+										</div>
+									</div>
+								</div>
+								<div class="wrapper-participants__result">
+									<div
+										class="wrapper-participants__result-arrow wrapper-participants__result-arrow-yellow">
+									</div>
+									<div class="wrapper-participants__result-percentage">
+										<span>346%</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- END SALES VOLUMES -->
+					<!-- TABLE SECTION -->
+					<div class="grid-wrapper__content flex-100">
+						<div class="grid-wrapper__heading">
+							<div class="grid-wrapper__title-wrapper">
+								<h2 class="grid-wrapper__title">Detalhamento dos clientes</h2>
+								<a class="grid-wrapper__btn-export" href="#">
+									<object type="image/svg+xml" data="{URL}/assets/images/down-arrow.svg"
+										class="grid-wrapper__btn-export-icon"></object>
+									<span class="grid-wrapper__btn-export-label">Exportar dados</span>
+								</a>
+							</div>
+							<p>
+								Comparativo do volume de vendas e meta por grupos e
+								distribuidores ou distribuidores e revendas que participam do
+								programa no período selecionado
+							</p>
+						</div>
+						<!-- TABLE FILTER -->
+						<div class="table-filter">
+							<form action="">
+								<div class="aside-filter__group flex-1">
+									<label class="color-lighting-yellow" for="view-by">Visualizar por</label>
+									<div class="custom-select__wrapper">
+										<div class="custom-select__button input-custom bg-white-smoke">
+											<input type="text" id="view-by" name="view-by"
+												value="Grupos e distribuidores" readonly />
+											<div class="custom-select__chevrons">
+												<i class="fa-solid fa-chevron-down color-lighting-yellow"
+													aria-hidden="true"></i>
+												<i class="fa-solid fa-chevron-up color-lighting-yellow"
+													aria-hidden="true"></i>
+											</div>
+										</div>
+										<div class="custom-select__content">
+											<div class="custom-select__options">
+												<span class="custom-select__option selected" data-value="1">Grupos e
+													distribuidores</span>
+												<span class="custom-select__option" data-value="2">Distribuidores e
+													revendas</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="aside-filter__group flex-1">
+									<label class="color-lighting-yellow" for="order-by">Ordenar por</label>
+									<div class="custom-select__wrapper">
+										<div class="custom-select__button input-custom bg-white-smoke">
+											<input type="text" id="order-by" name="order-by" value="Vendas acumuladas"
+												readonly />
+											<div class="custom-select__chevrons">
+												<i class="fa-solid fa-chevron-down color-lighting-yellow"
+													aria-hidden="true"></i>
+												<i class="fa-solid fa-chevron-up color-lighting-yellow"
+													aria-hidden="true"></i>
+											</div>
+										</div>
+										<div class="custom-select__content">
+											<div class="custom-select__options">
+												<span class="custom-select__option selected" data-value="1">Vendas
+													acumuladas</span>
+												<span class="custom-select__option" data-value="2">Evolução</span>
+												<span class="custom-select__option" data-value="3">Meta atingida</span>
+												<span class="custom-select__option" data-value="4">Ordem
+													alfabética</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<!-- END TABLE FILTER -->
+						<!-- TABLE -->
+						<div class="grid-wrapper__table-wrapper">
+							<table class="table">
+								<thead class="table__head">
+									<tr class="table__head-tr">
+										<th class="table__head-th"></th>
+										<th class="table__head-th">
+											<span class="table__head-title">Vendas acumuladas</span>
+											<div class="table__head-content">
+												<div class="table__head-content-date">
+													JAN/23 <span>></span> AGO/23
+												</div>
+												<div class="table__head-content-date">
+													JAN/22 <span>></span> AGO/22
+												</div>
+												<div class="table__head-content-evolution">
+													EVOLUÇÃO (%)
+												</div>
+											</div>
+										</th>
+										<th class="table__head-th">
+											<span class="table__head-title">Meta</span>
+											<div class="table__head-content">
+												<div class="table__head-content-date">
+													JAN/23 <span>></span> AGO/23
+												</div>
+												<div class="table__head-content-evolution">
+													Atingiu (?)
+												</div>
+											</div>
+										</th>
+									</tr>
+								</thead>
+								<tbody class="table__body">
+									<tr class="table__body-tr">
+										<th class="table__body-th">
+											<div class="table__body-th-toggle">
+												<div class="table__chevrons">
+													<i class="fa-solid fa-chevron-down color-lighting-yellow"
+														aria-hidden="true"></i>
+													<i class="fa-solid fa-chevron-up color-lighting-yellow"
+														aria-hidden="true"></i>
+												</div>
+												<div>GRUPO 3 <span>•</span> Nome do grupo</div>
+											</div>
+										</th>
+										<td class="table__body-td">
+											<div class="table__body-td-content">
+												<div><span>4.693.451</span></div>
+												<div><span>1.208.395</span></div>
+												<div>
+													<span class="arrow arrow-yellow">29%</span>
+												</div>
+											</div>
+										</td>
+										<td class="table__body-td">
+											<div class="table__body-td-content">
+												<div><span>4.300.000</span></div>
+												<div>
+													<span class="square square-yellow">+8%</span>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="table__body-tr">
+										<th class="table__body-th">
+											<div class="table__body-th-toggle">
+												<div class="table__chevrons">
+													<i class="fa-solid fa-chevron-down color-lighting-yellow"
+														aria-hidden="true"></i>
+													<i class="fa-solid fa-chevron-up color-lighting-yellow"
+														aria-hidden="true"></i>
+												</div>
+												<div>GRUPO 1 <span>•</span> Nome do grupo</div>
+											</div>
+										</th>
+										<td class="table__body-td">
+											<div class="table__body-td-content">
+												<div><span>1.693.451</span></div>
+												<div><span>1.208.395</span></div>
+												<div><span class="arrow arrow-yellow">29%</span></div>
+											</div>
+										</td>
+										<td class="table__body-td">
+											<div class="table__body-td-content">
+												<div><span>1.500.000</span></div>
+												<div>
+													<span class="square square-yellow">+8%</span>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="table__body-tr">
+										<th class="table__body-th">
+											<div class="table__body-th-toggle">
+												<div class="table__chevrons">
+													<i class="fa-solid fa-chevron-down color-lighting-yellow"
+														aria-hidden="true"></i>
+													<i class="fa-solid fa-chevron-up color-lighting-yellow"
+														aria-hidden="true"></i>
+												</div>
+												<div>GRUPO 8 <span>•</span> Nome do grupo</div>
+											</div>
+										</th>
+										<td class="table__body-td">
+											<div class="table__body-td-content">
+												<div><span>1.693.451</span></div>
+												<div><span>508.395</span></div>
+												<div>
+													<span class="arrow arrow-yellow">2.043%</span>
+												</div>
+											</div>
+										</td>
+										<td class="table__body-td">
+											<div class="table__body-td-content">
+												<div><span>800.000</span></div>
+												<div>
+													<span class="square square-yellow">+103%</span>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="table__body-tr">
+										<th class="table__body-th">
+											<div class="table__body-th-toggle">
+												<div class="table__chevrons">
+													<i class="fa-solid fa-chevron-down color-lighting-yellow"
+														aria-hidden="true"></i>
+													<i class="fa-solid fa-chevron-up color-lighting-yellow"
+														aria-hidden="true"></i>
+												</div>
+												<div>GRUPO 4 <span>•</span> Nome do grupo</div>
+											</div>
+										</th>
+										<td class="table__body-td">
+											<div class="table__body-td-content">
+												<div><span>1.208.395</span></div>
+												<div><span>1.693.451</span></div>
+												<div><span class="arrow arrow-red">11%</span></div>
+											</div>
+										</td>
+										<td class="table__body-td">
+											<div class="table__body-td-content">
+												<div><span>1.600.000</span></div>
+												<div><span class="square square-red">-40%</span></div>
+											</div>
+										</td>
+									</tr>
+									<tr class="table__body-tr">
+										<th class="table__body-th">
+											<div class="table__body-th-toggle">
+												<div class="table__chevrons">
+													<i class="fa-solid fa-chevron-down color-lighting-yellow"
+														aria-hidden="true"></i>
+													<i class="fa-solid fa-chevron-up color-lighting-yellow"
+														aria-hidden="true"></i>
+												</div>
+												<div>GRUPO 6 <span>•</span> Nome do grupo</div>
+											</div>
+										</th>
+										<td class="table__body-td">
+											<div class="table__body-td-content">
+												<div><span>1.093.451</span></div>
+												<div><span>1.108.395</span></div>
+												<div><span class="arrow arrow-red">10%</span></div>
+											</div>
+										</td>
+										<td class="table__body-td">
+											<div class="table__body-td-content">
+												<div><span>1.000.000</span></div>
+												<div>
+													<span class="square square-yellow">+8%</span>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="table__body-tr">
+										<th class="table__body-th">
+											<div class="table__body-th-toggle">
+												<div class="table__chevrons">
+													<i class="fa-solid fa-chevron-down color-lighting-yellow"
+														aria-hidden="true"></i>
+													<i class="fa-solid fa-chevron-up color-lighting-yellow"
+														aria-hidden="true"></i>
+												</div>
+												<div>GRUPO 5 <span>•</span> Nome do grupo</div>
+											</div>
+										</th>
+										<td class="table__body-td">
+											<div class="table__body-td-content">
+												<div><span>893.451</span></div>
+												<div><span>508.395</span></div>
+												<div><span class="arrow arrow-yellow">29%</span></div>
+											</div>
+										</td>
+										<td class="table__body-td">
+											<div class="table__body-td-content">
+												<div><span>1.500.000</span></div>
+												<div>
+													<span class="square square-yellow">+8%</span>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="table__body-tr">
+										<th class="table__body-th">
+											<div class="table__body-th-toggle">
+												<div class="table__chevrons">
+													<i class="fa-solid fa-chevron-down color-lighting-yellow"
+														aria-hidden="true"></i>
+													<i class="fa-solid fa-chevron-up color-lighting-yellow"
+														aria-hidden="true"></i>
+												</div>
+												<div>GRUPO 2 <span>•</span> Nome do grupo</div>
+											</div>
+										</th>
+										<td class="table__body-td">
+											<div class="table__body-td-content">
+												<div><span>493.451</span></div>
+												<div><span>208.395</span></div>
+												<div><span class="arrow arrow-yellow">29%</span></div>
+											</div>
+										</td>
+										<td class="table__body-td">
+											<div class="table__body-td-content">
+												<div><span>500.000</span></div>
+												<div><span class="square square-red">+1%</span></div>
+											</div>
+										</td>
+									</tr>
+									<tr class="table__body-tr">
+										<th class="table__body-th">
+											<div class="table__body-th-toggle">
+												<div class="table__chevrons">
+													<i class="fa-solid fa-chevron-down color-lighting-yellow"
+														aria-hidden="true"></i>
+													<i class="fa-solid fa-chevron-up color-lighting-yellow"
+														aria-hidden="true"></i>
+												</div>
+												<div>GRUPO 7 <span>•</span> Nome do grupo</div>
+											</div>
+											<div class="table__dropdown">
+												<ul class="table__dropdown-list">
+													<li class="table__dropdown-item table__dropdown-item-pl">
+														<div>INTERBAHIA</div>
+													</li>
+													<li class="table__dropdown-item table__dropdown-item-pl">
+														<div>INTERBAHIA - Filial Barreiras</div>
+													</li>
+													<li class="table__dropdown-item table__dropdown-item-pl">
+														<div>
+															INTERBAHIA - Filial Vitória da Conquista
+														</div>
+													</li>
+													<li class="table__dropdown-item table__dropdown-item-pl">
+														<div>AUTOBATE - Filial Itabuna</div>
+													</li>
+													<li class="table__dropdown-item table__dropdown-item-pl">
+														<div>AUTOBATE</div>
+													</li>
+													<li class="table__dropdown-item table__dropdown-item-pl">
+														<div>BONFIM</div>
+													</li>
+													<li class="table__dropdown-item table__dropdown-item-pl">
+														<div>COMBAT</div>
+													</li>
+													<li class="table__dropdown-item table__dropdown-item-pl">
+														<div>ALAGOANA - Filial Arapiraca</div>
+													</li>
+													<li class="table__dropdown-item table__dropdown-item-pl">
+														<div>ALAGOANA</div>
+													</li>
+												</ul>
+											</div>
+										</th>
+										<td class="table__body-td">
+											<div class="table__body-td-content">
+												<div><span>293.451</span></div>
+												<div><span>408.395</span></div>
+												<div><span class="arrow arrow-red">10%</span></div>
+											</div>
+											<div class="table__dropdown">
+												<ul class="table__dropdown-list">
+													<li class="table__dropdown-list-item">
+														<div class="table__body-td-content">
+															<div class="table__dropdown-item">
+																<span>243.813</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span>208.395</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span class="arrow arrow-yellow">29%</span>
+															</div>
+														</div>
+													</li>
+													<li class="table__dropdown-item">
+														<div class="table__body-td-content">
+															<div class="table__dropdown-item">
+																<span>243.813</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span>208.395</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span class="arrow arrow-red">29%</span>
+															</div>
+														</div>
+													</li>
+													<li class="table__dropdown-item">
+														<div class="table__body-td-content">
+															<div class="table__dropdown-item">
+																<span>243.813</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span>208.395</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span class="arrow arrow-yellow">29%</span>
+															</div>
+														</div>
+													</li>
+													<li class="table__dropdown-item">
+														<div class="table__body-td-content">
+															<div class="table__dropdown-item">
+																<span>243.813</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span>208.395</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span class="arrow arrow-red">29%</span>
+															</div>
+														</div>
+													</li>
+													<li class="table__dropdown-item">
+														<div class="table__body-td-content">
+															<div class="table__dropdown-item">
+																<span>243.813</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span>208.395</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span class="arrow arrow-yellow">29%</span>
+															</div>
+														</div>
+													</li>
+													<li class="table__dropdown-item">
+														<div class="table__body-td-content">
+															<div class="table__dropdown-item">
+																<span>243.813</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span>208.395</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span class="arrow arrow-yellow">29%</span>
+															</div>
+														</div>
+													</li>
+													<li class="table__dropdown-item">
+														<div class="table__body-td-content">
+															<div class="table__dropdown-item">
+																<span>243.813</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span>208.395</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span class="arrow arrow-red">29%</span>
+															</div>
+														</div>
+													</li>
+													<li class="table__dropdown-item">
+														<div class="table__body-td-content">
+															<div class="table__dropdown-item">
+																<span>243.813</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span>208.395</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span class="arrow arrow-red">29%</span>
+															</div>
+														</div>
+													</li>
+													<li class="table__dropdown-item">
+														<div class="table__body-td-content">
+															<div class="table__dropdown-item">
+																<span>243.813</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span>208.395</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span class="arrow arrow-yellow">29%</span>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</td>
+										<td class="table__body-td">
+											<div class="table__body-td-content">
+												<div><span>300.000</span></div>
+												<div>
+													<span class="square square-yellow">+8%</span>
+												</div>
+											</div>
+											<div class="table__dropdown">
+												<ul class="table__dropdown-list">
+													<li class="table__dropdown-list-item">
+														<div class="table__body-td-content">
+															<div class="table__dropdown-item">
+																<span>200.000</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span class="square square-yellow">+8%</span>
+															</div>
+														</div>
+													</li>
+													<li class="table__dropdown-list-item">
+														<div class="table__body-td-content">
+															<div class="table__dropdown-item">
+																<span>200.000</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span class="square square-red">-1%</span>
+															</div>
+														</div>
+													</li>
+													<li class="table__dropdown-list-item">
+														<div class="table__body-td-content">
+															<div class="table__dropdown-item">
+																<span>200.000</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span class="square square-yellow">+8%</span>
+															</div>
+														</div>
+													</li>
+													<li class="table__dropdown-list-item">
+														<div class="table__body-td-content">
+															<div class="table__dropdown-item">
+																<span>200.000</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span class="square square-yellow">+8%</span>
+															</div>
+														</div>
+													</li>
+													<li class="table__dropdown-list-item">
+														<div class="table__body-td-content">
+															<div class="table__dropdown-item">
+																<span>200.000</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span class="square square-red">-1%</span>
+															</div>
+														</div>
+													</li>
+													<li class="table__dropdown-list-item">
+														<div class="table__body-td-content">
+															<div class="table__dropdown-item">
+																<span>200.000</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span class="square square-yellow">+8%</span>
+															</div>
+														</div>
+													</li>
+													<li class="table__dropdown-list-item">
+														<div class="table__body-td-content">
+															<div class="table__dropdown-item">
+																<span>200.000</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span class="square square-yellow">+8%</span>
+															</div>
+														</div>
+													</li>
+													<li class="table__dropdown-list-item">
+														<div class="table__body-td-content">
+															<div class="table__dropdown-item">
+																<span>200.000</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span class="square square-red">-1%</span>
+															</div>
+														</div>
+													</li>
+													<li class="table__dropdown-list-item">
+														<div class="table__body-td-content">
+															<div class="table__dropdown-item">
+																<span>200.000</span>
+															</div>
+															<div class="table__dropdown-item">
+																<span class="square square-yellow">+8%</span>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</td>
+									</tr>
+									<tr class="table__body-tr">
+										<th class="table__body-th">Total</th>
+										<td class="table__body-td">
+											<div class="table__body-td-content">
+												<div><span>293.451</span></div>
+												<div><span>408.395</span></div>
+												<div><span class="arrow arrow-red">10%</span></div>
+											</div>
+										</td>
+										<td class="table__body-td">
+											<div class="table__body-td-content">
+												<div><span>300.000</span></div>
+												<div>
+													<span class="square square-yellow">+8%</span>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- END TABLE -->
+					</div>
+				</div>
+				{INCLUDE_ASIDE}
+			</div>
+		</div>
+	</main>
+	{INCLUDE_JAVASCRIPT}
+	<script type="module" src="{URL}/assets/js/module/chart.js"></script>
+	<script type="module" src="{URL}/assets/js/module/sell-in.js"></script>
+</body>
+</html>

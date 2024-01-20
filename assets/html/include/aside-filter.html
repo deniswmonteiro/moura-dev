@@ -1,0 +1,167 @@
+<aside class="aside-filter">
+  <form class="aside-filter__form" action="#">
+    <div class="aside-filter__group">
+      <label class="color-science-blue" for="period">Período</label>
+      <div class="custom-select__wrapper">
+        <div class="custom-select__button input-custom bg-white">
+          <input type="text"
+            id="period"
+            name="period"
+            value="Mês atual"
+            readonly />
+          <div class="custom-select__chevrons">
+            <i class="fa-solid fa-chevron-down color-science-blue"
+              aria-hidden="true">
+            </i>
+            <i class="fa-solid fa-chevron-up color-science-blue"
+              aria-hidden="true">
+            </i>
+          </div>
+        </div>
+        <div class="custom-select__content">
+          <div class="custom-select__options">
+            <span class="custom-select__option selected" data-value="mes-atual">Mês atual</span>
+            <span class="custom-select__option" data-value="ano-atual">Ano atual</span>
+            <span class="custom-select__option" data-value="3-mes">Últimos 3 meses</span>
+            <span class="custom-select__option" data-value="6-mes">Últimos 6 meses</span>
+            <span class="custom-select__option" data-value="12-mes">Últimos 12 meses</span>
+            <span class="custom-select__option" data-value="personalizado">Intervalo personalizado</span>
+          </div>
+        </div>
+      </div>
+      <div class="custom-select__date-wrapper">
+        <div class="custom-select__date-input bg-white">
+          <input id="calendar-date-1"
+            type="text"
+            placeholder="Escolha"
+            value=""
+            readonly />
+          <img src="{URL_IMG}/icon-input-date.png" alt="Icone Date" />
+        </div>
+        <div class="custom-select__date-input bg-white">
+          <input id="calendar-date-2"
+            type="text"
+            placeholder="Escolha"
+            value=""
+            readonly />
+          <img src="{URL_IMG}/icon-input-date.png" alt="Icone Date" />
+        </div>
+      </div>
+    </div>
+    <div class="aside-filter__group">
+      <label class="color-science-blue" for="group">Grupo</label>
+      <div class="custom-select__wrapper">
+        <div class="custom-select__button input-custom bg-white">
+          <input type="text" id="group" name="group" value="Todos" readonly />
+          <div class="custom-select__chevrons">
+            <i class="fa-solid fa-chevron-down color-science-blue"
+              aria-hidden="true">
+            </i>
+            <i class="fa-solid fa-chevron-up color-science-blue"
+              aria-hidden="true">
+            </i>
+          </div>
+        </div>
+        <div class="custom-select__content">
+          <div class="custom-select__options">
+            <span class="custom-select__option selected" data-value="1">Todos</span>
+            <span class="custom-select__option" data-value="2">Grupo 1</span>
+            <span class="custom-select__option" data-value="3">Grupo 2</span>
+            <span class="custom-select__option" data-value="4">Grupo 3</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="aside-filter__group">
+      <label class="color-science-blue" for="distributor">Distribuidor</label>
+      <div class="custom-select__wrapper">
+        <div class="custom-select__button input-custom bg-white">
+          <input type="text"
+            id="distributor"
+            name="distributor"
+            value="Todos"
+            readonly />
+          <div class="custom-select__chevrons">
+            <i class="fa-solid fa-chevron-down color-science-blue"
+              aria-hidden="true">
+            </i>
+            <i class="fa-solid fa-chevron-up color-science-blue"
+              aria-hidden="true">
+            </i>
+          </div>
+        </div>
+        <div class="custom-select__content">
+          <div class="custom-select__search">
+            <input type="text"
+              name="q"
+              id="q"
+              spellcheck="false"
+              placeholder="Busca pelo nome" />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="custom-select__options">
+            <span class="custom-select__option selected" data-value="1">Todos</span>
+            <span class="custom-select__option" data-value="2">COMAL - Filial Cachoeiro do Itapemirim (ES)</span>
+            <span class="custom-select__option" data-value="3">BONFIM (BA)</span>
+            <span class="custom-select__option" data-value="4">PALÁCIO (PE)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="aside-filter__group">
+      <label class="color-science-blue" for="segment">Segmento</label>
+      <div class="custom-select__wrapper">
+        <div class="custom-select__button input-custom bg-white">
+          <input type="text"
+            id="segment"
+            name="segment"
+            value="Todos"
+            readonly />
+          <div class="custom-select__chevrons">
+            <i class="fa-solid fa-chevron-down color-science-blue"
+              aria-hidden="true">
+            </i>
+            <i class="fa-solid fa-chevron-up color-science-blue"
+              aria-hidden="true">
+            </i>
+          </div>
+        </div>
+        <div class="custom-select__content">
+          <div class="custom-select__options">
+            <span class="custom-select__option selected" data-value="1">Todos</span>
+            <span class="custom-select__option" data-value="2">Segmento 1</span>
+            <span class="custom-select__option" data-value="3">Segmento 2</span>
+            <span class="custom-select__option" data-value="4">Segmento 3</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="aside-filter__group">
+      <label class="color-science-blue" for="resale">Revenda</label>
+      <div class="custom-select__wrapper">
+        <div class="custom-select__button input-custom bg-white">
+          <input type="text" id="resale" name="resale" value="Todos" readonly />
+          <div class="custom-select__chevrons">
+            <i class="fa-solid fa-chevron-down color-science-blue"
+              aria-hidden="true">
+            </i>
+            <i class="fa-solid fa-chevron-up color-science-blue"
+              aria-hidden="true">
+            </i>
+          </div>
+        </div>
+        <div class="custom-select__content">
+          <div class="custom-select__options">
+            <span class="custom-select__option selected" data-value="1">Todos</span>
+            <span class="custom-select__option" data-value="2">Revenda 1</span>
+            <span class="custom-select__option" data-value="3">Revenda 2</span>
+            <span class="custom-select__option" data-value="4">Revenda 3</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="aside-filter__button">
+      <button class="button-blue" type="submit">Filtrar</button>
+    </div>
+  </form>
+</aside>

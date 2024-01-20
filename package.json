@@ -1,0 +1,30 @@
+{
+  "name": "moura-plataforma-trade",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/register": "^7.22.15",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-connect": "^5.7.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-minify": "^3.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-sass": "^5.1.0",
+    "gulp-svgmin": "^4.1.0",
+    "gulp-svgstore": "^9.0.0",
+    "quick-local-ip": "^1.0.7",
+    "sass": "^1.69.2"
+  }
+}

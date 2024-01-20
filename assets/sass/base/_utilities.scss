@@ -1,0 +1,50 @@
+// | -------------------------------------------------------------
+// | Utilities
+// | -------------------------------------------------------------
+
+@use "sizes" as *;
+
+$color-ironside-grey: var(--color-ironside-grey);
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.color-science-blue {
+  color: var(--color-science-blue);
+}
+
+.color-lighting-yellow {
+  color: var(--color-lighting-yellow);
+}
+
+.color-lemon-grass {
+  color: var(--color-lemon-grass);
+  font-weight: 300;
+}
+
+.color-rosso-corsa {
+  color: var(--color-rosso-corsa);
+}
+
+.bg-white-smoke {
+  background-color: var(--color-white-smoke);
+}
+
+.bg-white {
+  background-color: var(--color-white);
+}
+
+.text-italic {
+  @include size-10;
+  color: $color-ironside-grey;
+  font-style: italic;
+}

@@ -1,0 +1,40 @@
+// | -------------------------------------------------------------
+// | Border
+// | -------------------------------------------------------------
+
+$border-style: solid !default;
+$border-small: 1px !default;
+$border-medium: 2px !default;
+$border-large: 6px !default;
+
+.border-dashed-top-blue {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--color-science-blue);
+}
+
+@mixin border-small($color) {
+  border-width: $border-small;
+  border-style: $border-style;
+  border-color: $color;
+}
+
+@mixin border-medium($color) {
+  border-width: $border-medium;
+  border-style: $border-style;
+  border-color: $color;
+}
+
+@mixin border-large($color) {
+  border-width: $border-large;
+  border-style: $border-style;
+  border-color: $color;
+}
+
+@mixin radius-small {
+  border-radius: var(--radius-small);
+}
+
+@mixin radius-large {
+  border-radius: var(--radius-large);
+}

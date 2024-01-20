@@ -1,0 +1,32 @@
+// | -------------------------------------------------------------
+// | Root
+// | -------------------------------------------------------------
+
+:root {
+  --color-navy: #001c49;
+  --color-royal-azure: #0033ab;
+  --color-science-blue: #006ec7;
+  --color-rosso-corsa: #cc0000;
+  --color-orange-peel: #efa903;
+  --color-lighting-yellow: #ffbf31;
+  --color-early-dawn: #fff9ea;
+  --color-mercury: #e5e5e5;
+  --color-lemon-grass: #999999;
+  --color-granite: #808080;
+  --color-ironside-grey: #666666;
+  --color-pastel-grey: #cccccc;
+  --color-white-smoke: #f5f5f5;
+  --color-titan-white: #e5f0f9;
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  --radius-small: 4px;
+  --radius-large: 10px;
+  --gap-default: 2rem;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}

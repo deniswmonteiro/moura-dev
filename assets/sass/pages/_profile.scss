@@ -1,0 +1,120 @@
+// | -------------------------------------------------------------
+// | Profile
+// | -------------------------------------------------------------
+
+@use "../base/sizes" as *;
+@use "../base/space" as *;
+@use "../base/border" as *;
+
+$color-science-blue: var(--color-science-blue);
+$color-black: var(--color-black);
+$color-titan-white: var(--color-titan-white);
+$color-white: var(--color-white);
+
+.profile-wrapper {
+  margin: 34px 0;
+  padding: $space-30 $space-30 $space-30 55px;
+  background-color: $color-titan-white;
+  border-radius: var(--radius-large);
+
+  &__form {
+    fieldset {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  }
+
+  &__photo {
+    display: flex;
+    flex-direction: column;
+    gap: $space-15;
+  }
+
+  &__photo-img {
+    width: 180px;
+    height: 180px;
+    background: $color-white;
+    border-radius: 50%;
+
+    i {
+      font-size: 100px;
+    }
+  }
+
+  &__photo-button {
+    width: 180px;
+    height: 40px;
+    background-color: $color-black;
+    @include size-12;
+    color: $color-white;
+    font-weight: 700;
+    text-align: center;
+    border-radius: var(--radius-large);
+
+    label {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+  }
+
+  &__data {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: $space-15;
+  }
+
+  &__form-title {
+    @include size-18;
+    color: $color-black;
+    line-height: 1.3;
+    font-weight: 700;
+  }
+
+  &__form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__form-group-input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+  }
+
+  &__form-label {
+    @include size-10;
+    color: $color-science-blue;
+    text-transform: uppercase;
+  }
+
+  &__form-input {
+    padding: $space-12 $space-15;
+    background-color: $color-white;
+    @include border-small($color-white);
+    border-radius: var(--radius-large);
+
+    &:read-only {
+      background-color: transparent;
+    }
+  }
+
+  &__form-submit {
+    button {
+      height: 48px;
+      text-transform: capitalize;
+      font-weight: 700;
+    }
+  }
+}

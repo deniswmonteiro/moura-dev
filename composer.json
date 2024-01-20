@@ -1,0 +1,21 @@
+{
+    "authors": [{
+        "name": "Lucas Dantas",
+        "email": "lucas@moveon.dev",
+        "homepage": "https://www.moveon.dev",
+        "role": "Developer"
+    }],
+    "support": {
+        "email": "lucas@moveon.dev"
+    },
+    "require": {
+        "php": ">=8.2",
+        "vlucas/phpdotenv": "^5.5",
+        "raelgc/template": "^2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        }
+    }
+}

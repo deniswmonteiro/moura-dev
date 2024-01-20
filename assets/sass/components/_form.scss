@@ -1,0 +1,54 @@
+// | -------------------------------------------------------------
+// | Form
+// | -------------------------------------------------------------
+
+@use "../base/space" as *;
+@use "../base/sizes" as *;
+@use "../base/border" as *;
+@use "../base/transitions" as *;
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form__label {
+  @include size-10;
+  color: var(--color-science-blue);
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.form__input {
+  max-width: 100%;
+  height: 40px;
+  margin-bottom: $space-15;
+  padding: 0 $space-12;
+  background-color: var(--color-white-smoke);
+  @include border-small(var(--color-white-smoke));
+  border-radius: var(--radius-large);
+
+  &:focus {
+    border-color: var(--color-science-blue);
+  }
+}
+
+.form__submit {
+  margin-top: $space-15;
+}
+
+.form__link {
+  margin-top: $space-15;
+  text-align: center;
+
+  a {
+    @include size-12;
+    color: var(--color-science-blue);
+    @include transition(color, 0.3s, ease-in-out);
+
+    &:hover {
+      color: var(--color-orange-peel);
+    }
+  }
+}

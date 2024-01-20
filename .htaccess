@@ -1,0 +1,30 @@
+Options -Indexes
+RewriteEngine On
+
+#WWW
+RewriteCond %{HTTP_HOST} !=localhost
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+#HTTPS
+RewriteCond %{HTTP_HOST} !=localhost
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+#404
+ErrorDocument 404 https://www.example.com
+
+#Login
+RewriteRule ^\/?$ assets/requisicao/index.php?diretorio=login [NC,QSA]
+
+#Module, action and identifier
+RewriteRule ^([a-z,0-9,_-]+)\/?$ assets/requisicao/index.php?diretorio=$1 [NC,L,QSA]
+RewriteRule ^([a-z,0-9,_-]+)\/([a-z,0-9,_-]+)\/?$ assets/requisicao/index.php?diretorio=$1&acao=$2 [NC,L,QSA]
+
+#Redirects
+RewriteRule ^assets/php/([a-z,0-9,_-]+)\/([a-z,0-9,_.-]+)\/?$ https://www.example.com [R=301,NC]
+RewriteRule ^assets/php/([a-z,0-9,_-]+)\/?$ https://www.example.com [R=301,NC]
+RewriteRule ^assets/html/([a-z,0-9,_-]+)\/([a-z,0-9,_.-]+)\/?$ https://www.example.com [R=301,NC]
+RewriteRule ^assets/html/([a-z,0-9,_-]+)\/?$ https://www.example.com [R=301,NC]
+RewriteRule ^assets/submit/([a-z,0-9,_-]+)\/?$ https://www.example.com [R=301,NC]
+RewriteRule ^assets/submit/([a-z,0-9,_-]+)\/([a-z,0-9,_.-]+)\/?$ https://www.example.com [R=301,NC]

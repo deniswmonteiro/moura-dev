@@ -1,0 +1,226 @@
+// | -------------------------------------------------------------
+// | Header
+// | -------------------------------------------------------------
+
+@use "../base/space" as *;
+@use "../base/sizes" as *;
+@use "../base/border" as *;
+@use "../base/breakpoint" as *;
+@use "../base/transitions" as *;
+
+$color-black: var(--color-black);
+$color-white: var(--color-white);
+$color-science-blue: var(--color-science-blue);
+$color-ironside-grey: var(--color-ironside-grey);
+$color-granite: var(--color-granite);
+$color-white-smoke: var(--color-white-smoke);
+$color-lighting-yellow: var(--color-lighting-yellow);
+
+.header {
+  background-color: $color-white;
+  z-index: 1;
+
+  &__wrapper {
+    padding: $space-20 95px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap-default);
+    flex-wrap: wrap;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 140px;
+    height: auto;
+    margin-left: 30px;
+
+    a {
+      display: flex;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  // profile header
+  &__profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &-dropdown {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
+
+      h3 {
+        @include size-12;
+        color: $color-black;
+        font-weight: 700;
+      }
+
+      span {
+        @include size-10;
+        color: $color-science-blue;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+
+    &-button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+
+      i {
+        @include size-15;
+        color: $color-science-blue;
+      }
+    }
+
+    &-image {
+      width: 40px;
+      height: 40px;
+      background-color: $color-lighting-yellow;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 50%;
+        height: 50%;
+        object-fit: cover;
+      }
+    }
+
+    &-dropdown-options {
+      width: 200px;
+      padding: $space-15;
+      background-color: $color-black;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      border-radius: var(--radius-large);
+      display: none;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-start;
+      gap: 10px;
+
+      a {
+        @include size-12;
+        color: $color-white;
+        font-weight: 400;
+        @include transition(all, 0.3s, ease-in-out);
+
+        &:hover {
+          color: $color-lighting-yellow;
+        }
+      }
+    }
+  }
+
+  // navbar
+  &__navbar {
+    padding: $space-20 95px;
+    background-color: $color-science-blue;
+    border-top: 4px solid $color-lighting-yellow;
+    display: flex;
+    align-items: center;
+    gap: 86px;
+
+    &-title {
+      h2 {
+        @include size-24;
+        color: $color-white;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+
+      li {
+        a {
+          max-width: 100%;
+          width: 130px;
+          height: 17px;
+          padding: $space-8 0;
+          @include size-12;
+          color: $color-white;
+          text-transform: uppercase;
+          text-align: center;
+          border-radius: var(--radius-large);
+
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .active {
+          background-color: $color-lighting-yellow;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(medium) {
+    &__wrapper,
+    &__navbar {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    &__navbar {
+      flex-direction: column;
+      &-list {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+// button hamburger
+.btn-hamburger {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background-color: $color-white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-bottom: $space-8;
+    background-color: $color-granite;
+  }
+
+  span:last-child {
+    margin-bottom: 0;
+  }
+}

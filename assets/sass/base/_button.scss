@@ -1,0 +1,30 @@
+// | -------------------------------------------------------------
+// | Button
+// | -------------------------------------------------------------
+
+@use "./space" as *;
+@use "./sizes" as *;
+@use "./transitions" as *;
+
+.button-blue {
+  max-width: 100%;
+  width: 100%;
+  height: 40px;
+  background-color: var(--color-science-blue);
+  font-family: "Poppins", sans-serif;
+  @include size-12;
+  color: var(--color-white);
+  line-height: 18px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: var(--radius-large);
+  @include transition(all, 0.3s, ease-in-out);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: var(--color-royal-azure);
+  }
+}

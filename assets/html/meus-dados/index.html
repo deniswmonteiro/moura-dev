@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+<head>
+	{INCLUDE_CABECALHO}
+	<title itemprop="name">Profile</title>
+	<link rel="canonical" href="{URL}/profile" itemprop="url" />
+	<meta name="description" content="{OBJ_METADATA->DESCRIPTION}" />
+	<meta name="keywords" content="{OBJ_METADATA->KEYWORD}" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="{URL_IMG_SHARE}" />
+	<meta name="twitter:title" content="{OBJ_METADATA->TITLE}" />
+	<meta name="twitter:description" content="{OBJ_METADATA->DESCRIPTION}" />
+	<meta property="og:locale" content="PT_BR" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="{OBJ_METADATA->TITLE}" />
+	<meta property="og:description" content="{OBJ_METADATA->DESCRIPTION}" />
+	<meta property="og:site_name" content="{PROJECT_NAME}" />
+	<meta property="og:url" content="{URL}" />
+	<meta property="og:image" content="{URL_IMG_SHARE}" />
+</head>
+<body>
+	{INCLUDE_TOPO}
+	<main class="main profile-page">
+		<nav class="header__navbar">
+			<div class="header__navbar-title">
+				<h2>Meus dados</h2>
+			</div>
+		</nav>
+		<div class="container">
+			<div class="">
+				<div class="profile-wrapper">
+					<form class="profile-wrapper__form" action="#">
+						<fieldset>
+							<div class="profile-wrapper__photo">
+								<div class="profile-wrapper__photo-img">
+									<img src="assets/images/photo-profile.png" alt="Photo Profile" />
+								</div>
+								<div class="profile-wrapper__photo-button">
+									<label for="photo-file">
+										Alterar foto
+										<input type="file" id="photo-file" name="photo-file" />
+									</label>
+								</div>
+							</div>
+							<div class="profile-wrapper__data">
+								<div class="profile-wrapper__form-group">
+									<div class="profile-wrapper__form-group-input">
+										<label class="profile-wrapper__form-label" for="name">Nome</label>
+										<input class="profile-wrapper__form-input" type="text" name="name" id="name"
+											value="Danielle Nogueira" readonly />
+									</div>
+								</div>
+								<div class="profile-wrapper__form-group">
+									<div class="profile-wrapper__form-group-input">
+										<label class="profile-wrapper__form-label" for="email">E-mail</label>
+										<input class="profile-wrapper__form-input" type="text" name="email" id="email"
+											value="danielle.nogueira@grupomoura.com" readonly />
+									</div>
+									<div class="profile-wrapper__form-group-input">
+										<label class="profile-wrapper__form-label" for="phone">Telefone</label>
+										<input class="profile-wrapper__form-input" type="phone" name="phone" id="phone"
+											value="(81) 99999-9999" />
+									</div>
+								</div>
+								<div class="profile-wrapper__form-group border-dashed-top-blue">
+									<div class="profile-wrapper__form-title">
+										<h2>Alterar senha</h2>
+									</div>
+								</div>
+								<div class="profile-wrapper__form-group">
+									<div class="profile-wrapper__form-group-input">
+										<label class="profile-wrapper__form-label" for="current-password">Senha
+											atual</label>
+										<input class="profile-wrapper__form-input" type="password"
+											name="current-password" id="current-password" value="********" />
+									</div>
+									<div class="profile-wrapper__form-group-input">
+										<label class="profile-wrapper__form-label" for="new-password">Nova senha</label>
+										<input class="profile-wrapper__form-input" type="password" name="new-password"
+											id="new-password" />
+									</div>
+									<div class="profile-wrapper__form-group-input">
+										<label class="profile-wrapper__form-label" for="confirm-new-password">Confirmar
+											nova senha</label>
+										<input class="profile-wrapper__form-input" type="password"
+											name="confirm-new-password" id="confirm-new-password" />
+									</div>
+								</div>
+								<div class="profile-wrapper__form-submit border-dashed-top-blue">
+									<button class="button-blue" type="submit">
+										Atualizar meus dados
+									</button>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</main>
+	{INCLUDE_JAVASCRIPT}
+</body>
+</html>

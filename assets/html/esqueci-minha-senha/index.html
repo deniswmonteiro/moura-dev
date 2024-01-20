@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+<head>
+	{INCLUDE_HEAD}
+	<title itemprop="name">Esqueci minha senha</title>
+	<link rel="canonical" href="{URL}/esqueci-minha-senha" itemprop="url" />
+	<meta name="description" content="{OBJ_METADATA->DESCRIPTION}" />
+	<meta name="keywords" content="{OBJ_METADATA->KEYWORD}" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="{URL_CSS}/main.css" type="text/css" />
+</head>
+<body>
+	<main class="main forgot-password-page">
+		<div class="page-default__wrapper">
+			<div class="page-default__column">
+				<div class="page-default__content">
+					<div class="page-default__logo">
+						<img src="{URL_IMG}/logo-plataforma-trade-moura.png" alt="Plataforma Trade Moura" />
+						<p>Informe seu e-mail para esqueci sua senha</p>
+					</div>
+					<div class="form-wrapper">
+						<form class="form form-forget-password" action="#">
+							<div class="form__group">
+								<label class="form__label" for="email">Email</label>
+								<input class="form__input" type="email" id="email" name="email" />
+							</div>
+							<div class="form__submit">
+								<button class="button-blue" type="submit">Enviar</button>
+							</div>
+							<div class="form__link">
+								<a href="{URL}">Voltar para login</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="page-default__background"></div>
+		</div>
+	</main>
+	{INCLUDE_FOOTER}
+</body>
+</html>
