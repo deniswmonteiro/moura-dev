@@ -171,7 +171,7 @@ $color-science-blue: var(--color-science-blue);
 .wrapper-participants {
   margin-top: $space-30;
   display: flex;
-  gap: $space-15;
+  gap: $space-30;
   flex-wrap: wrap;
 
   &__content {
@@ -189,12 +189,12 @@ $color-science-blue: var(--color-science-blue);
   &__content-wrapper {
     display: flex;
     flex-direction: column;
-    gap: $space-15;
   }
 
   &__heading {
     max-width: 100%;
     width: 110px;
+    margin-bottom: $space-15;
 
     h3 {
       @include size-12;
@@ -218,7 +218,7 @@ $color-science-blue: var(--color-science-blue);
 
   &__result {
     position: absolute;
-    right: 37px;
+    right: 30px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -228,12 +228,18 @@ $color-science-blue: var(--color-science-blue);
   &__value {
     @include size-18;
     font-weight: 700;
+    margin-bottom: $space-10;
   }
 
   &__result-arrow {
     width: 65px;
     height: 65px;
     display: inline-block;
+
+    &__arrow-lg {
+      width: 90px;
+      height: 105px;
+    }
   }
 
   &__result-retancle-gray {
