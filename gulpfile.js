@@ -16,7 +16,7 @@ var sass = require("gulp-sass")(require("sass"));
 var production = false;
 var root = production
   ? "https://www.moura.com.br/"
-  : "http://localhost/moura-plataforma-de-trade/";
+  : "http://localhost/moura-dev/";
 
 function swallowError(error) {
   //If you want details of the error in the console

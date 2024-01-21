@@ -98,7 +98,11 @@ $color-science-blue: var(--color-science-blue);
     position: relative;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 22.5px;
+
+    &.grid-wrapper__representation-arrow {
+      max-width: 100% !important;
+    }
 
     &-title {
       max-width: 230px;
@@ -212,10 +216,12 @@ $color-science-blue: var(--color-science-blue);
   }
 
   &__result {
+    position: absolute;
+    right: 42.5px;
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: $space-15;
+    gap: $space-10;
   }
 
   &__value {
@@ -224,8 +230,8 @@ $color-science-blue: var(--color-science-blue);
   }
 
   &__result-arrow {
-    width: 80px;
-    height: 80px;
+    width: 65px;
+    height: 65px;
     display: inline-block;
   }
 

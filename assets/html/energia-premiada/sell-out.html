@@ -55,10 +55,10 @@
 									<span class="table__head-title">Sell out</span>
 									<div class="table__head-content">
 										<div class="table__head-content-date">
-											JAN/23 <span>></span> AGO/23
+											JAN/23 <span>&gt;</span> AGO/23
 										</div>
 										<div class="table__head-content-date">
-											JAN/22 <span>></span> AGO/22
+											JAN/22 <span>&gt;</span> AGO/22
 										</div>
 										<div class="table__head-content-evolution">
 											VARIAÇÃO (%)
@@ -69,7 +69,7 @@
 									<span class="table__head-title">SELL IN</span>
 									<div class="table__head-content">
 										<div class="table__head-content-date">
-											JAN/23 <span>></span> AGO/23
+											JAN/23 <span>&gt;</span> AGO/23
 										</div>
 										<div class="table__head-content-evolution">
 											VARIAÇÃO (%)
@@ -291,134 +291,123 @@
 				<!-- SELL OUT -->
 				<div class="grid-wrapper">
 					<div class="grid-wrapper__content flex-50">
-						<div class="grid-wrapper__heading">
-							<h2>Sell Out</h2>
-							<p>
-								Somatória de baterias vendidas pelas revendas que participam
-								do programa no período selecionado
-							</p>
-						</div>
-						<div class="wrapper-comparison">
-							<div class="wrapper-comparison__content">
-								<div class="wrapper-comparison__date">
-									<span>Jan/23</span>
-									<i>></i>
-									<span>Ago/23</span>
-								</div>
-								<div class="wrapper-comparison__value">
-									<span class="color-lighting-yellow">193.451</span>
-								</div>
+						<div>
+							<div class="grid-wrapper__heading">
+								<h2>Sell Out</h2>
+								<p>
+									Somatória de baterias vendidas pelas revendas que participam
+									do programa no período selecionado
+								</p>
 							</div>
-							<div class="wrapper-comparison__content">
-								<div class="wrapper-comparison__date">
-									<span>Jan/22</span>
-									<i>></i>
-									<span>Ago/22</span>
+							<div class="wrapper-comparison">
+								<div class="wrapper-comparison__content">
+									<div class="wrapper-comparison__date">
+										<span>Jan/23</span>
+										<i>&gt;</i>
+										<span>Ago/23</span>
+									</div>
+									<div class="wrapper-comparison__value">
+										<span class="color-lighting-yellow">193.451</span>
+									</div>
 								</div>
-								<div class="wrapper-comparison__value">
-									<span class="color-lemon-grass">98.395</span>
+								<div class="wrapper-comparison__content">
+									<div class="wrapper-comparison__date">
+										<span>Jan/22</span>
+										<i>&gt;</i>
+										<span>Ago/22</span>
+									</div>
+									<div class="wrapper-comparison__value">
+										<span class="color-lemon-grass">98.395</span>
+									</div>
 								</div>
-							</div>
-						</div>
-						<div class="wrapper-comparison__options">
-							<div class="wrapper-comparison__button-wrapper">
-								<button class="wrapper-comparison__button active" type="button">
-									Mês
-								</button>
-							</div>
-							<div class="wrapper-comparison__button-wrapper">
-								<button class="wrapper-comparison__button" type="button">
-									Dia
-								</button>
 							</div>
 						</div>
-						<!-- CHART -->
-						<div class="grid-wrapper__chart">
-							<canvas id="chart-sell-out"></canvas>
-						</div>
-						<!-- END CHART -->
-						<div class="grid-wrapper__representation">
-							<div class="grid-wrapper__representation-title">
-								<h3>
-									Evolução do Sell Out no período selecionado comparado ao
-									mesmo período do ano anterior
-								</h3>
+						<div>
+							<!-- CHART -->
+							<div class="grid-wrapper__chart">
+								<canvas id="chart-sell-out"></canvas>
 							</div>
-							<div class="wrapper-participants__result">
-								<div
-									class="wrapper-participants__result-arrow wrapper-participants__result-arrow-yellow">
+							<!-- END CHART -->
+						
+							<div class="grid-wrapper__representation grid-wrapper__representation-arrow">
+								<div class="grid-wrapper__representation-title">
+									<h3>
+										Evolução do Sell Out no período selecionado comparado ao
+										mesmo período do ano anterior
+									</h3>
 								</div>
-								<div class="wrapper-participants__result-percentage">
-									<span>1.058%</span>
+								<div class="wrapper-participants__result">
+									<div
+										class="wrapper-participants__result-arrow wrapper-participants__result-arrow-yellow">
+									</div>
+									<div class="wrapper-participants__result-percentage">
+										<span>103%</span>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 					<!-- END SELL OUT -->
+
 					<!-- SELL IN x SELL OUT -->
 					<div class="grid-wrapper__content flex-50">
-						<div class="grid-wrapper__heading">
-							<h2>Sell In X Sell Out</h2>
-							<p>
-								Comparativo das somatórias de baterias compradas e vendidas
-								pelas revendas no período selecionado
-							</p>
-						</div>
-						<div class="wrapper-comparison">
-							<div class="wrapper-comparison__content">
-								<div class="wrapper-comparison__date">
-									<span>SELL IN</span>
-									<i>•</i>
-									<span> Jan/23</span>
-									<i>></i>
-									<span>Ago/23</span>
-								</div>
-								<div class="wrapper-comparison__value">
-									<span class="color-lemon-grass">1.693.451</span>
-								</div>
+						<div>
+							<div class="grid-wrapper__heading">
+								<h2>Sell In X Sell Out</h2>
+								<p>
+									Comparativo das somatórias de baterias compradas e vendidas
+									pelas revendas no período selecionado
+								</p>
 							</div>
-							<div class="wrapper-comparison__content">
-								<div class="wrapper-comparison__date">
-									<span>SELL OUT</span>
-									<i>•</i>
-									<span> Jan/23</span>
-									<i>></i>
-									<span>Ago/23</span>
+							<div class="wrapper-comparison">
+								<div class="wrapper-comparison__content">
+									<div class="wrapper-comparison__date">
+										<span>SELL IN</span>
+										<i>&bull;</i>
+										<span> Jan/23</span>
+										<i>&gt;</i>
+										<span>Ago/23</span>
+									</div>
+									<div class="wrapper-comparison__value">
+										<span class="color-lemon-grass">1.693.451</span>
+									</div>
 								</div>
-								<div class="wrapper-comparison__value">
-									<span class="color-lighting-yellow">193.451</span>
+								<div class="wrapper-comparison__content">
+									<div class="wrapper-comparison__date">
+										<span>SELL OUT</span>
+										<i>&bull;</i>
+										<span> Jan/23</span>
+										<i>&gt;</i>
+										<span>Ago/23</span>
+									</div>
+									<div class="wrapper-comparison__value">
+										<span class="color-lighting-yellow">193.451</span>
+									</div>
 								</div>
-							</div>
-						</div>
-						<div class="wrapper-comparison__options">
-							<div class="wrapper-comparison__button-wrapper">
-								<button class="wrapper-comparison__button active" type="button">
-									Mês
-								</button>
-							</div>
-							<div class="wrapper-comparison__button-wrapper">
-								<button class="wrapper-comparison__button" type="button">
-									Dia
-								</button>
 							</div>
 						</div>
-						<!-- CHART -->
-						<div class="grid-wrapper__chart">
-							<canvas id="chart-sell-in-x-out"></canvas>
-						</div>
-						<!-- END CHART -->
-						<div class="grid-wrapper__representation">
-							<div class="grid-wrapper__representation-title">
-								<h3>
-									Representatividade do Sell Out em relação ao Sell In no
-									período selecionado
-								</h3>
-							</div>
+						
+						<div>
 							<!-- CHART -->
-							<div class="grid-wrapper__chart-representation">
-								<canvas id="chart-representation-1"></canvas>
+							<div class="grid-wrapper__chart">
+								<canvas id="chart-sell-in-x-out"></canvas>
 							</div>
 							<!-- END CHART -->
+						
+							<div class="grid-wrapper__representation">
+								<div class="grid-wrapper__representation-title">
+									<h3>
+										Representatividade do Sell Out em relação ao Sell In no
+										período selecionado
+									</h3>
+								</div>
+								
+								<!-- CHART -->
+								<div class="grid-wrapper__chart-representation">
+									<canvas id="chart-representation-1"></canvas>
+								</div>
+								<!-- END CHART -->
+							</div>
 						</div>
 					</div>
 					<!-- END SELL IN x SELL OUT -->
@@ -506,10 +495,10 @@
 											<span class="table__head-title">Sell out</span>
 											<div class="table__head-content">
 												<div class="table__head-content-date">
-													JAN/23 <span>></span> AGO/23
+													JAN/23 <span>&gt;</span> AGO/23
 												</div>
 												<div class="table__head-content-date">
-													JAN/22 <span>></span> AGO/22
+													JAN/22 <span>&gt;</span> AGO/22
 												</div>
 												<div class="table__head-content-evolution">
 													Evolução (%)
@@ -520,7 +509,7 @@
 											<span class="table__head-title">Sell in</span>
 											<div class="table__head-content">
 												<div class="table__head-content-date">
-													JAN/23 <span>></span> AGO/23
+													JAN/23 <span>&gt;</span> AGO/23
 												</div>
 												<div class="table__head-content-evolution">
 													Evolução (%)
