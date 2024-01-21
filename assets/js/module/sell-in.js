@@ -63,6 +63,7 @@ const configChartWalletActive = {
         borderWidth: 1,
         borderColor: COLORS.yellow,
         backgroundColor: COLORS.yellow,
+        barThickness: 16,
       },
     ],
   },

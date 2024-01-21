@@ -100,7 +100,7 @@ $color-science-blue: var(--color-science-blue);
     align-items: center;
     gap: 22.5px;
 
-    &.grid-wrapper__representation-arrow {
+    &.grid-wrapper__representation-not-chart {
       max-width: 100% !important;
     }
 
@@ -175,6 +175,7 @@ $color-science-blue: var(--color-science-blue);
   flex-wrap: wrap;
 
   &__content {
+    position: relative;
     padding: $space-30;
     background-color: $color-early-dawn;
     border-radius: var(--radius-large);
@@ -217,7 +218,7 @@ $color-science-blue: var(--color-science-blue);
 
   &__result {
     position: absolute;
-    right: 42.5px;
+    right: 37px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -236,8 +237,8 @@ $color-science-blue: var(--color-science-blue);
   }
 
   &__result-retancle-gray {
-    width: 80px;
-    height: 80px;
+    width: 65px;
+    height: 65px;
     display: inline-block;
     background-image: url(../images/rectangle-gray.png);
     background-size: contain;
