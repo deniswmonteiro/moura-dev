@@ -53,19 +53,20 @@ $color-science-blue: var(--color-science-blue);
   }
 
   &__btn-export {
-    width: 180px;
-    height: 25px;
+    width: 260px;
+    height: 30px;
     background-color: $color-black;
     @include size-10;
     color: $color-white;
     font-weight: bold;
     text-transform: uppercase;
     border-radius: var(--radius-large);
-    @include transition(all, 0.3s, ease-in-out);
+    transition: .3s ease-out;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    cursor: pointer;
 
     span {
       @include size-10;
@@ -75,6 +76,7 @@ $color-science-blue: var(--color-science-blue);
 
     &:hover {
       background-color: $color-science-blue;
+      transition: .3s ease-in;
     }
   }
 

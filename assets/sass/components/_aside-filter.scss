@@ -37,7 +37,6 @@ $radius-large: var(--radius-large);
   height: 40px;
   padding: 0 $space-15;
   font-family: "Poppins", sans-serif;
-  @include size-12;
   color: $color-black;
   @include border-small($color-white);
   border-radius: $radius-large;
@@ -47,6 +46,8 @@ $radius-large: var(--radius-large);
   justify-content: space-between;
 
   input {
+    @include size-12;
+    line-height: 1.5;
     padding: 0;
     background-color: transparent;
     border: none;

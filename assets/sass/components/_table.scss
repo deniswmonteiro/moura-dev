@@ -15,6 +15,7 @@ $color-white-smoke: var(--color-white-smoke);
 .table-filter {
   form {
     margin-top: $space-30;
+    margin-bottom: $space-15;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -35,15 +36,19 @@ td {
 }
 
 thead th:nth-child(1) {
-  width: 33%;
+  width: 30%;
 }
 
 thead th:nth-child(2) {
-  width: 28%;
+  width: 33%;
 }
 
 thead th:nth-child(3) {
-  width: 20%;
+  width: 22%;
+}
+
+.table__head-th {
+  padding: 0 15px 15px 15px;
 }
 
 .table__head-th,
@@ -135,7 +140,7 @@ thead th:nth-child(3) {
     border-bottom: 0;
 
     th {
-      padding-left: 25px;
+      padding-left: 20px;
     }
   }
 }
@@ -172,11 +177,12 @@ thead th:nth-child(3) {
 
 .table__body-td-content {
   display: flex;
-  gap: 10px;
 
   & > div {
     flex: 1;
     text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   & > div:nth-child(1),
@@ -199,14 +205,19 @@ thead th:nth-child(3) {
   // dropdown table
   ul {
     li {
-      padding: $space-15 5px $space-15 0;
       @include size-12;
       font-weight: 400;
+      padding: 15px 0;
       border-top: 1px dashed $color-pastel-grey;
-    }
 
-    .table__dropdown-item-pl {
-      padding-left: 25px;
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+
+
+      &.table__dropdown-item-pl {
+        padding-left: 20px;
+      }
     }
 
     .table__dropdown-item-with-profile {
