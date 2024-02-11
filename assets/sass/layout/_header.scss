@@ -216,6 +216,11 @@ $color-green: var(--color-green);
         display: block;
       }
 
+      &:hover i {
+        color: $color-lighting-yellow;
+        transition: .3s ease-in;
+      }
+
       button {
         border: none;
         position: relative;
@@ -223,11 +228,6 @@ $color-green: var(--color-green);
         i {
           color: $color-white;
           transition: .3s ease-out;
-  
-          &:hover {
-            color: $color-lighting-yellow;
-            transition: .3s ease-in;
-          }
         }
   
         span {
