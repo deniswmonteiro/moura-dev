@@ -23,11 +23,19 @@
 @import "components/grid-wrapper";
 @import "components/table";
 @import "components/modal";
+@import "components/search";
 
 // pages
 @import "pages/page-default";
 @import "pages/profile";
+@import "pages/arts-platform/home";
+@import "pages/arts-platform/clients-requests";
+@import "pages/arts-platform/my-requests";
+@import "pages/arts-platform/requests-production";
+@import "pages/arts-platform/collections";
 
 // plugins
 @import "plugins/vanilla-calendar";
 @import "plugins/chart";
+@import "plugins/bootstrap-custom";
+@import "plugins/select2-custom";

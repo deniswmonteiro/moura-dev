@@ -4,6 +4,7 @@
 	{INCLUDE_CABECALHO}
 	<title itemprop="name">Energia Premiada - Sell In</title>
 	<link rel="canonical" href="{URL}/energia-premiada" itemprop="url" />
+	<meta name="page" content="energia-premiada" />
 	<meta name="description" content="{OBJ_METADATA->DESCRIPTION}" />
 	<meta name="keywords" content="{OBJ_METADATA->KEYWORD}" />
 	<meta name="twitter:card" content="summary_large_image" />
@@ -21,30 +22,7 @@
 <body>
 	{INCLUDE_TOPO}
 	<main class="main">
-		<!-- NAVBAR -->
-		<nav class="header__navbar">
-			<div class="header__navbar-title">
-				<h2>Energia premiada</h2>
-			</div>
-			<div class="header__navbar-wrapper">
-				<ul class="header__navbar-list">
-					<li>
-						<a class="active" href="javascript:;">Sell in</a>
-					</li>
-					<li>
-						<a href="{URL}/energia-premiada/sell-out">Sell out</a>
-					</li>
-					<li>
-						<a href="{URL}/energia-premiada/participantes">Participantes</a>
-					</li>
-					<li>
-						<a href="{URL}/energia-premiada/premiacao">Premiação</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-		<!-- END NAVBAR -->
-		<div class="container">
+		<div class="mr-container">
 			<div class="content">
 				<!-- CUMULATIVE SALES -->
 				<div class="grid-wrapper">
@@ -102,6 +80,7 @@
 						</div>
 					</div>
 					<!-- END CUMULATIVE SALES -->
+
 					<!-- ACTIVE WALLET -->
 					<div class="grid-wrapper__content flex-50">
 						<div>
@@ -124,7 +103,8 @@
 									<div class="wrapper-comparison__date">
 										<span>Ago/22</span>
 									</div>
-									<div class="wrapper-comparison__value">
+									<div class="wrapper-comparison__value"
+										id="active-wallet-last-year">
 										<span class="color-lemon-grass">-</span>
 									</div>
 								</div>
@@ -154,6 +134,7 @@
 						</div>
 					</div>
 					<!-- END ACTIVE WALLET -->
+
 					<!-- SALES VOLUMES -->
 					<div class="grid-wrapper__content flex-100">
 						<div class="grid-wrapper__heading">
@@ -191,7 +172,7 @@
 								</div>
 								<div class="wrapper-participants__result">
 									<div
-										class="wrapper-participants__result-arrow wrapper-participants__result-arrow__arrow-lg wrapper-participants__result-arrow-yellow" >
+										class="wrapper-participants__result-arrow wrapper-participants__result-arrow__arrow-lg wrapper-participants__result-arrow-yellow">
 									</div>
 									<div class="wrapper-participants__result-percentage">
 										<span>1.058%</span>
@@ -290,51 +271,39 @@
 								Comparativo do volume de vendas e meta por grupos e distribuidores ou distribuidores e revendas que participam do programa no período selecionado
 							</p>
 						</div>
+
 						<!-- TABLE FILTER -->
 						<div class="table-filter">
-							<form action="">
+							<form action="#" method="POST" id="form-table-filter">
+								<!-- View by -->
 								<div class="aside-filter__group flex-1">
-									<label class="color-lighting-yellow" for="view-by">Visualizar por</label>
+									<label class="color-lighting-yellow" for="filter-view-by">Visualizar por</label>
 									<div class="custom-select__wrapper">
-										<div class="custom-select__button input-custom bg-white-smoke">
-											<input type="text" id="view-by" name="view-by"
-												value="Grupos e distribuidores" readonly />
-											<div class="custom-select__chevrons">
-												<i class="fa-solid fa-chevron-down color-lighting-yellow"
-													aria-hidden="true"></i>
-												<i class="fa-solid fa-chevron-up color-lighting-yellow"
-													aria-hidden="true"></i>
-											</div>
-										</div>
-										<div class="custom-select__content">
-											<div class="custom-select__options">
-												<span class="custom-select__option selected" data-value="1">Grupos e distribuidores</span>
-												<span class="custom-select__option" data-value="2">Distribuidores e revendas</span>
-											</div>
-										</div>
+										<select class="custom-select__item no-search"
+											id="filter-view-by"
+											name="filter-view-by">
+											<option value="grupos-distribuidores" selected>
+												Grupos e distribuidores
+											</option>
+											<option value="ano-atual">Distribuidores e revendas</option>
+										</select>
 									</div>
 								</div>
+
+								<!-- Order by -->
 								<div class="aside-filter__group flex-1">
-									<label class="color-lighting-yellow" for="order-by">Ordenar por</label>
+									<label class="color-lighting-yellow" for="filter-order-by">Ordenar por</label>
 									<div class="custom-select__wrapper">
-										<div class="custom-select__button input-custom bg-white-smoke">
-											<input type="text" id="order-by" name="order-by" value="Vendas acumuladas"
-												readonly />
-											<div class="custom-select__chevrons">
-												<i class="fa-solid fa-chevron-down color-lighting-yellow"
-													aria-hidden="true"></i>
-												<i class="fa-solid fa-chevron-up color-lighting-yellow"
-													aria-hidden="true"></i>
-											</div>
-										</div>
-										<div class="custom-select__content">
-											<div class="custom-select__options">
-												<span class="custom-select__option selected" data-value="1">Vendas acumuladas</span>
-												<span class="custom-select__option" data-value="2">Evolução</span>
-												<span class="custom-select__option" data-value="3">Meta atingida</span>
-												<span class="custom-select__option" data-value="4">Ordem alfabética</span>
-											</div>
-										</div>
+										<select class="custom-select__item no-search"
+											id="filter-order-by"
+											name="filter-order-by">
+											<option value="vendas-acumuladas" selected>
+												Vendas acumuladas
+											</option>
+											<option value="evolução">Evolução</option>
+											<option value="meta-atingida">Meta atingida</option>
+											<option value="ordem-alfabetica">Ordem alfabética</option>
+										</select>
 									</div>
 								</div>
 							</form>
@@ -847,18 +816,26 @@
 											</div>
 										</td>
 									</tr>
-									<tr class="table__body-tr">
+									<tr class="table__body-tr table__footer">
 										<th class="table__body-th">Total</th>
 										<td class="table__body-td">
 											<div class="table__body-td-content">
-												<div><span>293.451</span></div>
-												<div><span>408.395</span></div>
-												<div><span class="arrow arrow-red">10%</span></div>
+												<div>
+													<span>293.451</span>
+												</div>
+												<div>
+													<span>408.395</span>
+												</div>
+												<div>
+													<span class="arrow arrow-red">10%</span>
+												</div>
 											</div>
 										</td>
 										<td class="table__body-td">
 											<div class="table__body-td-content">
-												<div><span>300.000</span></div>
+												<div>
+													<span>300.000</span>
+												</div>
 												<div>
 													<span class="square square-yellow">+8%</span>
 												</div>
@@ -876,7 +853,8 @@
 		</div>
 	</main>
 	{INCLUDE_JAVASCRIPT}
-	<script type="module" src="{URL}/assets/js/module/chart.js"></script>
-	<script type="module" src="{URL}/assets/js/module/sell-in.js"></script>
+	<script type="module" src="{URL_JS}/module/chart.js"></script>
+	<script type="module" src="{URL_JS}/module/sell-in.js"></script>
+	<script type="module" src="{URL_JS}/module/calendar-month.js"></script>
 </body>
 </html>

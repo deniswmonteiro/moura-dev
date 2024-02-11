@@ -34,7 +34,7 @@ const configCharSellout = {
       },
       {
         label: "JAN/22",
-        data: [5, 9, 17, 16, 19, 25, 29, 25, 32],
+        data: [5, 9, 17, 16, 19, 25, 29, 25],
         borderWidth: 1,
         borderColor: COLORS.gray,
         backgroundColor: COLORS.gray,
@@ -69,7 +69,7 @@ const configChartSellIntVersusSellOut = {
       },
       {
         label: "JAN/22",
-        data: [5, 9, 17, 16, 19, 25, 29, 25, 32],
+        data: [5, 9, 17, 16, 19, 25, 29, 25],
         borderWidth: 1,
         borderColor: COLORS.gray,
         backgroundColor: COLORS.gray,
@@ -109,3 +109,5 @@ const chartRepresentation1 = renderChart(
   ctxChartRepresentation1,
   configChartRepresetation1
 );
+
+window.submitAsideFilter = () => {}

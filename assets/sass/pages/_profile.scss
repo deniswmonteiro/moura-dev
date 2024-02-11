@@ -100,13 +100,21 @@ $color-white: var(--color-white);
   }
 
   &__form-input {
+    @include size-12;
+    line-height: 1.4;
     padding: $space-12 $space-15;
     background-color: $color-white;
     @include border-small($color-white);
     border-radius: var(--radius-large);
+    transition: .3s ease-out;
 
     &:read-only {
       background-color: transparent;
+    }
+
+    &:not(:read-only):focus {
+      border-color: var(--color-science-blue);
+      transition: .3s ease-in;
     }
   }
 

@@ -13,7 +13,7 @@ const ctxChartWalletActive = document.getElementById("chart-wallet-active");
 const ctxChartRepresentation1 = document.getElementById("chart-representation-1");
 const ctxChartRepresentation2 = document.getElementById("chart-representation-2");
 
-// config chart cumulative sales
+// Config chart cumulative sales
 const configChartCumativeSales = {
   type: "line",
   data: {
@@ -32,7 +32,7 @@ const configChartCumativeSales = {
       },
       {
         label: "JAN/22",
-        data: [5, 9, 17, 16, 19, 25, 29, 25, 32],
+        data: [5, 9, 17, 16, 19, 25, 29, 25],
         borderWidth: 1,
         borderColor: COLORS.gray,
         backgroundColor: COLORS.gray,
@@ -52,7 +52,7 @@ const chartCumulativeSales = renderChart(
 );
 
 // config chart wallet active
-const configChartWalletActive = {
+export const configChartWalletActive = {
   type: "bar",
   data: {
     labels: MONTHS,
@@ -63,7 +63,6 @@ const configChartWalletActive = {
         borderWidth: 1,
         borderColor: COLORS.yellow,
         backgroundColor: COLORS.yellow,
-        barThickness: 16,
       },
     ],
   },
@@ -71,7 +70,7 @@ const configChartWalletActive = {
 };
 
 // config chart wallet active
-const chartWalletActive = renderChart(
+export const chartWalletActive = renderChart(
   ctxChartWalletActive,
   configChartWalletActive
 );
@@ -117,3 +116,31 @@ const chartRepresentation2 = renderChart(
   ctxChartRepresentation2,
   configChartRepresetation2
 );
+
+window.submitAsideFilter = () => {
+  const filterPeriod = document.querySelector("#filter-period");
+  const activeWalletLastYear = document.querySelector("#active-wallet-last-year span");
+
+  if (filterPeriod.value === "12-mes") {
+    if (configChartWalletActive["data"]["datasets"].length === 1) {
+        configChartWalletActive["data"]["datasets"].push({
+        label: "AGO/22",
+        data: [8, 13, 1, 2, 10, 13, 18, 15],
+        borderWidth: 1,
+        borderColor: COLORS.gray,
+        backgroundColor: COLORS.gray,
+        });
+
+        activeWalletLastYear.innerText = "4.319";
+        chartWalletActive.update();
+    }
+  }
+
+  else {
+    if (configChartWalletActive["data"]["datasets"].length === 2) {
+        configChartWalletActive["data"]["datasets"].pop();
+        activeWalletLastYear.innerText = "-";
+        chartWalletActive.update();
+    }
+  }
+}

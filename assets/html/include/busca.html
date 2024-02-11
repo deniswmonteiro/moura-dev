@@ -1,0 +1,85 @@
+<div class="offcanvas offcanvas-end search-wrapper" tabindex="-1"   
+    id="search"
+    aria-labelledby="searchLabel">
+    <div class="offcanvas-header search-wrapper__header">
+        <button type="button" class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body search-wrapper__body">
+        <h2 class="search-wrapper__body__title">Busca</h2>
+
+        <form action="#" method="POST" class="custom-form"
+            id="custom-form">
+            <!-- Title -->
+            <div class="custom-form__group">
+                <label class="custom-form__label" for="search-title">
+                    Título
+                </label>
+                <div class="custom-form__wrapper">
+                    <input type="text" class="custom-form__wrapper__input"
+                        id="search-title"
+                        name="search-title">
+                </div>
+            </div>
+
+            <!-- Distributor -->
+            <div class="custom-form__group">
+                <label class="custom-form__label" for="search-distributor">
+                    Distribuidor
+                </label>
+                <div class="custom-form__wrapper">
+                    <select class="custom-form__wrapper__select"
+                        id="search-distributor"
+                        name="search-distributor">
+                        <option value="todos" selected>Todos</option>
+                        <option value="distribuidor-1">COMAL - Filial Cachoeiro do Itapemirim (ES)</option>
+                        <option value="distribuidor-2">BONFIM (BA)</option>
+                        <option value="distribuidor-3">PALÁCIO (PE)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Status -->
+            <!-- Clients Requests -->
+            <div class="custom-form__group">
+                <label class="custom-form__label" for="search-status-clients-requests">
+                    Status
+                </label>
+                <div class="custom-form__wrapper">
+                    <select class="custom-form__wrapper__select no-search"
+                        id="search-status-clients-requests"
+                        name="search-status-clients-requests">
+                        <option value="todos" selected>Todos</option>
+                        <option value="status-1">Em aprovação</option>
+                        <option value="status-2">Em ajustes</option>
+                        <option value="status-3">Reprovadas</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Period -->
+            <div class="custom-form__group">
+                <label class="custom-form__label" for="search-period">
+                    Data de Abertura
+                </label>
+                <div class="custom-form__wrapper__date">
+                    <div class="custom-form__wrapper__date__input">
+                      <input type="text" id="calendar-date-1"
+                        readonly />
+                    </div>
+                    <div class="custom-form__wrapper__date__input">
+                      <input type="text" class="disabled"
+                        id="calendar-date-2"
+                        readonly
+                        disabled />
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="btn mr-button mr-button__type-3 mr-button__blue">
+                Filtrar
+            </button>
+        </form>
+    </div>
+</div>

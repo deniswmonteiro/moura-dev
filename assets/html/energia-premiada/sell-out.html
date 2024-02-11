@@ -4,6 +4,7 @@
 	{INCLUDE_CABECALHO}
 	<title itemprop="name">Energia Premiada - Sell Out</title>
 	<link rel="canonical" href="{URL}/energia-premiada/sell-out" itemprop="url" />
+	<meta name="page" content="energia-premiada" />
 	<meta name="description" content="{OBJ_METADATA->DESCRIPTION}" />
 	<meta name="keywords" content="{OBJ_METADATA->KEYWORD}" />
 	<meta name="twitter:card" content="summary_large_image" />
@@ -263,30 +264,8 @@
 			</div>
 		</div>
 		<!-- END MODAL -->
-		<!-- NAVBAR -->
-		<nav class="header__navbar">
-			<div class="header__navbar-title">
-				<h2>Energia premiada</h2>
-			</div>
-			<div class="header__navbar-wrapper">
-				<ul class="header__navbar-list">
-					<li>
-						<a href="{URL}/energia-premiada">Sell in</a>
-					</li>
-					<li>
-						<a class="active" href="javascript:;">Sell out</a>
-					</li>
-					<li>
-						<a href="{URL}/energia-premiada/participantes">Participantes</a>
-					</li>
-					<li>
-						<a href="{URL}/energia-premiada/premiacao">Premiação</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-		<!-- END NAVBAR -->
-		<div class="container">
+		
+		<div class="mr-container">
 			<div class="content">
 				<!-- SELL OUT -->
 				<div class="grid-wrapper">
@@ -407,6 +386,7 @@
 						</div>
 					</div>
 					<!-- END SELL IN x SELL OUT -->
+
 					<!-- TABLE SECTION -->
 					<div class="grid-wrapper__content flex-100">
 						<div class="grid-wrapper__heading">
@@ -422,58 +402,38 @@
 								Comparativo do Sell Out e Sell In por grupos e distribuidores ou distribuidores e revendas que participam do programa no período selecionado
 							</p>
 						</div>
+
 						<!-- TABLE FILTER -->
 						<div class="table-filter">
-							<form action="#">
+							<form action="#" method="POST" id="form-table-filter">
+								<!-- View by -->
 								<div class="aside-filter__group flex-1">
-									<label class="color-lighting-yellow" for="view-by">Visualizar por</label>
+									<label class="color-lighting-yellow" for="filter-view-by">Visualizar por</label>
 									<div class="custom-select__wrapper">
-										<div class="custom-select__button input-custom bg-white-smoke">
-											<input type="text" id="view-by" name="view-by"
-												value="Distribuidores e revendas" readonly />
-											<div class="custom-select__chevrons">
-												<i class="fa-solid fa-chevron-down color-lighting-yellow"
-													aria-hidden="true"></i>
-												<i class="fa-solid fa-chevron-up color-lighting-yellow"
-													aria-hidden="true"></i>
-											</div>
-										</div>
-										<div class="custom-select__content">
-											<div class="custom-select__options">
-												<span class="custom-select__option selected" data-value="1">Grupos e
-													distribuidores</span>
-												<span class="custom-select__option" data-value="2">Distribuidores e
-													revendas</span>
-											</div>
-										</div>
+										<select class="custom-select__item no-search"
+											id="filter-view-by"
+											name="filter-view-by">
+											<option value="grupos-distribuidores" selected>
+												Grupos e distribuidores
+											</option>
+											<option value="ano-atual">Distribuidores e revendas</option>
+										</select>
 									</div>
 								</div>
+
+								<!-- Order by -->
 								<div class="aside-filter__group flex-1">
-									<label class="color-lighting-yellow" for="order-by">Ordernar por</label>
+									<label class="color-lighting-yellow" for="filter-order-by">Ordernar por</label>
 									<div class="custom-select__wrapper">
-										<div class="custom-select__button input-custom bg-white-smoke">
-											<input type="text" id="order-by" name="order-by" value="Sell Out"
-												readonly />
-											<div class="custom-select__chevrons">
-												<i class="fa-solid fa-chevron-down color-lighting-yellow"
-													aria-hidden="true"></i>
-												<i class="fa-solid fa-chevron-up color-lighting-yellow"
-													aria-hidden="true"></i>
-											</div>
-										</div>
-										<div class="custom-select__content">
-											<div class="custom-select__options">
-												<span class="custom-select__option selected" data-value="1">Sell
-													Out</span>
-												<span class="custom-select__option" data-value="2">Evolução do Sell
-													Out</span>
-												<span class="custom-select__option" data-value="3">Sell In</span>
-												<span class="custom-select__option" data-value="4">Evolução do Sell
-													In</span>
-												<span class="custom-select__option" data-value="5">Ordem
-													alfabética</span>
-											</div>
-										</div>
+										<select class="custom-select__item no-search"
+											id="filter-order-by"
+											name="filter-order-by">
+											<option value="sell-out" selected>Sell Out</option>
+											<option value="evolucao-sell-out">Evolução do Sell Out</option>
+											<option value="sell-in">Sell In</option>
+											<option value="evolucao-sell-in">Evolução do Sell In</option>
+											<option value="ordem-alfabetica">Ordem alfabética</option>
+										</select>
 									</div>
 								</div>
 							</form>
@@ -1054,14 +1014,16 @@
 											</div>
 										</td>
 									</tr>
-									<tr class="table__body-tr">
-										<th class="table__body-th">
-											<div class="table__body-th">Total</div>
-										</th>
+									<tr class="table__body-tr table__footer">
+										<th class="table__body-th">Total</th>
 										<td class="table__body-td">
 											<div class="table__body-td-content">
-												<div><span>293.451</span></div>
-												<div><span>408.395</span></div>
+												<div>
+													<span>293.451</span>
+												</div>
+												<div>
+													<span>408.395</span>
+												</div>
 												<div>
 													<span class="arrow arrow-red">10%</span>
 												</div>
@@ -1069,9 +1031,11 @@
 										</td>
 										<td class="table__body-td">
 											<div class="table__body-td-content">
-												<div><span>300.000</span></div>
 												<div>
-													<span class="arrow arrow-yellow">+8%</span>
+													<span>300.000</span>
+												</div>
+												<div>
+													<span class="square square-yellow">+8%</span>
 												</div>
 											</div>
 										</td>
@@ -1090,5 +1054,6 @@
 	{INCLUDE_JAVASCRIPT}
 	<script src="{URL_JS}/module/modal.js"></script>
 	<script type="module" src="{URL_JS}/module/sell-out.js"></script>
+	<script type="module" src="{URL_JS}/module/calendar-month.js"></script>
 </body>
 </html>

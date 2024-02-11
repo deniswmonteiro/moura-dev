@@ -17,7 +17,6 @@ const configChartResales = {
         borderWidth: 1,
         borderColor: COLORS.yellow,
         backgroundColor: COLORS.yellow,
-        barThickness: 16,
       },
     ],
   },
@@ -38,7 +37,6 @@ const configChartManagers = {
         borderWidth: 1,
         borderColor: COLORS.yellow,
         backgroundColor: COLORS.yellow,
-        barThickness: 16,
       },
     ],
   },
@@ -59,7 +57,6 @@ const configChartClerk = {
         borderWidth: 1,
         borderColor: COLORS.yellow,
         backgroundColor: COLORS.yellow,
-        barThickness: 16,
       },
     ],
   },
@@ -80,7 +77,6 @@ const configChartSalesByClerk = {
         borderWidth: 1,
         borderColor: COLORS.yellow,
         backgroundColor: COLORS.yellow,
-        barThickness: 16,
       },
     ],
   },
@@ -91,3 +87,5 @@ const chartSalesByClerk = renderChart(
   ctxCharSalesByClerks,
   configChartSalesByClerk
 );
+
+window.submitAsideFilter = () => {}

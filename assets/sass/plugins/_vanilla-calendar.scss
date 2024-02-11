@@ -5,6 +5,7 @@
 @use "../base/sizes" as *;
 
 $color-science-blue: var(--color-science-blue);
+$color-royal-azure: var(--color-royal-azure);
 $color-lighting-yellow: var(--color-lighting-yellow);
 $color-lemon-grass: var(--color-lemon-grass);
 $color-ironside-grey: var(--color-ironside-grey);
@@ -16,11 +17,26 @@ $color-white: var(--color-white);
 }
 
 .vanilla-calendar {
-  min-width: 0;
-  background-color: $color-black;
+  min-width: 254px;
+  background-color: $color-black !important;
   @include size-12;
   color: $color-white;
   position: absolute;
+  margin-top: 10px;
+  margin-left: -28px;
+  z-index: 3000 !important;
+
+  &.search {
+    margin-left: -8px;
+  }
+
+  &_hidden {
+    z-index: 0 !important;
+  }
+
+  &.calendar-2 {
+    margin-left: -148px;
+  }
 }
 
 .vanilla-calendar-header {
@@ -28,38 +44,75 @@ $color-white: var(--color-white);
     &::before,
     &::after {
       background-color: $color-science-blue;
+      border-radius: 8px;
+    }
+
+    &:hover {
+      &::before,
+      &::after {
+        background-color: $color-lighting-yellow;
+        opacity: 1;
+      }
     }
   }
 }
 
-.vanilla-calendar-header__content {
-  button {
-    color: $color-white;
-  }
+.vanilla-calendar-year,
+.vanilla-calendar-month,
+.vanilla-calendar-day,
+.vanilla-calendar-months__month,
+.vanilla-calendar-years__year {
+  @include size-12;
 }
 
-.vanilla-calendar-week__day {
-  font-size: 8px;
-}
-
-.vanilla-calendar-day__btn {
-  background-color: $color-black;
+.vanilla-calendar-month,
+.vanilla-calendar-year {
   color: $color-white;
 
   &:hover {
-    background-color: $color-lighting-yellow;
-    color: $color-white;
+    color: $color-lighting-yellow !important;
   }
 }
 
-button.vanilla-calendar-day__btn.vanilla-calendar-day__btn_today {
-  background: $color-science-blue;
+.vanilla-calendar-day__btn,
+.vanilla-calendar-months__month,
+.vanilla-calendar-years__year {
+  background-color: $color-black !important;
+  color: $color-white !important;
+
+  &:hover,
+  &.vanilla-calendar-day__btn_selected,
+  &.vanilla-calendar-months__month_selected,
+  &.vanilla-calendar-years__year_selected {
+    background-color: $color-lighting-yellow !important;
+  }
 }
 
-.vanilla-calendar-day__btn_weekend {
-  color: $color-lemon-grass;
+.vanilla-calendar-week__day_weekend {
+  color: $color-lemon-grass !important;
 }
 
-.vanilla-calendar-day__btn_next {
-  color: $color-ironside-grey;
+.vanilla-calendar-day__btn {
+  &:hover,
+  &_selected {
+    background-color: $color-lighting-yellow !important;
+  }
+
+  &_today {
+    background: $color-science-blue !important;
+  }
+
+  &_weekend,
+  &_next {
+    color: $color-lemon-grass !important;
+  }
+
+  &_disabled {
+    color: $color-ironside-grey !important;
+  }
+
+  &.vanilla-calendar-day__btn_today.vanilla-calendar-day__btn_selected {
+    background-color: $color-lighting-yellow !important;
+    color: $color-science-blue !important;
+  }
 }

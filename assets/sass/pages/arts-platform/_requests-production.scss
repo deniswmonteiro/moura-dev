@@ -1,0 +1,153 @@
+@use "../../base/sizes" as *;
+
+#arts-platform-requests-production {
+    .mr-main-card {
+        border: none;
+        background-color: transparent;
+
+        &__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 0 30px 0;
+            background-color: transparent;
+            border-bottom: 1px solid var(--color-mercury);
+
+            h2 {
+                @include size-18;
+                font-weight: 700;
+            }
+
+            &__actions {
+                display: flex;
+                gap: 10px;
+            }
+        }
+
+        &__body {
+            padding: 30px 0 0 0;
+            
+            &__item {
+                max-width: 20%;
+                padding-left: 7.5px;
+                padding-right: 7.5px;
+            }
+
+            .mr-card {
+                border: none;
+                background-color: transparent;
+
+                &__header {
+                    @include size-14;
+                    font-weight: 700;
+                    background-color: transparent;
+                    padding: 0 0 15px 0;
+                    border-bottom: none;
+
+                    span {
+                        font-weight: 400;
+                    }
+                }
+
+                &__body {
+                    padding: 15px;
+                    border-radius: 10px;
+                    height: 440px;
+                    overflow-y: scroll;
+                    background-color: var(--color-titan-white);
+
+                    & > a {
+                        display: block;
+
+                        &:not(:last-of-type) {
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+
+                * {
+                    scrollbar-width: thin;
+                    scrollbar-color: var(--color-white);
+                }
+                    
+                /* Works on Chrome, Edge, and Safari */
+                *::-webkit-scrollbar {
+                    width: 10px;
+                }
+                
+                *::-webkit-scrollbar-track {
+                    background: var(--color-white);
+                    border-radius: 10px;
+                }
+                
+                *::-webkit-scrollbar-thumb {
+                    background: var(--color-lemon-grass);
+                    border-radius: 10px;
+                    border: 3px solid var(--color-white);
+                }
+            }
+
+            .mr-card-item {
+                border-radius: 5px;
+                border: none;
+
+                &__header {
+                    background-color: transparent;
+                    @include size-12;
+                    font-weight: 700;
+                    padding: 15px 15px 0 15px;
+                    border-bottom: none;
+                }
+
+                &__body {
+                    padding: 10px 15px;
+        
+                    span {
+                        @include size-8;
+                        text-transform: uppercase;
+                        display: block;
+                    }
+        
+                    p {
+                        @include size-10;
+                        text-transform: uppercase;
+                    }
+                }
+
+                &__footer {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    background-color: transparent;
+                    padding: 0 15px 15px 15px;
+                    border-top: none;
+        
+                    div {
+                        display: flex;
+                        align-items: center;
+                        gap: 14px;
+        
+                        p {
+                            display: flex;
+                            align-items: center;
+                            gap: 4px;
+        
+                            i {
+                                color: var(--color-lemon-grass);
+                            }
+        
+                            span {
+                                @include size-8;
+                                line-height: 1.5;
+                            }
+                        }
+                    }
+                }
+
+                span {
+                    color: var(--color-science-blue);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+<head>
+	{INCLUDE_CABECALHO}
+	<title itemprop="name">Plataforma de Artes - Home</title>
+	<link rel="canonical" href="{URL}/plataforma-de-artes" itemprop="url" />
+	<meta name="page" content="plataforma-de-artes" />
+	<meta name="description" content="{OBJ_METADATA->DESCRIPTION}" />
+	<meta name="keywords" content="{OBJ_METADATA->KEYWORD}" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="{URL_IMG_SHARE}" />
+	<meta name="twitter:title" content="{OBJ_METADATA->TITLE}" />
+	<meta name="twitter:description" content="{OBJ_METADATA->DESCRIPTION}" />
+	<meta property="og:locale" content="PT_BR" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="{OBJ_METADATA->TITLE}" />
+	<meta property="og:description" content="{OBJ_METADATA->DESCRIPTION}" />
+	<meta property="og:site_name" content="{PROJECT_NAME}" />
+	<meta property="og:url" content="{URL}/plataforma-de-artes" />
+	<meta property="og:image" content="{URL_IMG_SHARE}" />
+</head>
+<body>
+	{INCLUDE_TOPO}
+	
+	<main class="main" id="arts-platform">
+		<div class="container">
+			<div class="row">
+				<div class="mr-requests">
+					<div class="card mr-main-card">
+						<h2 class="card-header mr-main-card__header">
+							Solicitações
+						</h2>
+						<div class="card-body mr-main-card__body">
+							<div class="row">
+								<div class="col-5">
+									<div class="card mr-card">
+										<!-- Admin -->
+										<h3 class="card-header mr-card__header">
+											<span>Dos clientes</span>
+											<a href="{URL}/plataforma-de-artes/solicitacoes-dos-clientes">
+												Ver todas
+												<i class="fa-solid fa-chevron-right yellow-icon"></i>
+											</a>
+										</h3>
+
+										<!-- Distributor -->
+										<h3 class="card-header mr-card__header d-none">
+											<span>Minhas solicitações</span>
+											<a href="{URL}/plataforma-de-artes/minhas-solicitacoes">
+												Ver todas
+												<i class="fa-solid fa-chevron-right yellow-icon"></i>
+											</a>
+										</h3>
+										<div class="card-body mr-card__body">
+											<div class="row">
+												<!-- On Approval -->
+												<div class="col-6">
+													<div class="card mr-card__body__item"
+														id="arts-platform-on-approval">
+														<div class="card-body">
+															<p>Em aprovação</p>
+															<span class="on-approval">13</span>
+														</div>
+													</div>
+												</div>
+
+												<!-- In Adjustments -->
+												<div class="col-6">
+													<div class="card mr-card__body__item"
+														id="arts-platform-in-adjustments">
+														<div class="card-body">
+															<p>Em ajustes</p>
+															<span class="in-adjustments">4</span>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<!-- Distributor -->
+											<div class="row d-none">
+												<!-- In Progress -->
+												<div class="col-6">
+													<div class="card mr-card__body__item"
+														id="arts-platform-in-progress">
+														<div class="card-body">
+															<p>Em progresso</p>
+															<span class="in-production">37</span>
+														</div>
+													</div>
+												</div>
+
+												<!-- My Review -->
+												<div class="col-6">
+													<div class="card mr-card__body__item"
+														id="arts-platform-my-review">
+														<div class="card-body">
+															<p>Minha revisão</p>
+															<span class="in-production">4</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row d-none">
+												<!-- Finished -->
+												<div class="col-6">
+													<div class="card mr-card__body__item"
+														id="arts-platform-finished">
+														<div class="card-body">
+															<p>Finalizadas</p>
+															<span class="in-production">58</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- End Distributor -->
+
+											<div class="row">
+												<!-- Failed -->
+												<div class="col-6">
+													<div class="card mr-card__body__item"
+														id="arts-platform-failed">
+														<div class="card-body">
+															<p>Reprovadas</p>
+															<span class="failed">37</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="card mr-card">
+										<h3 class="card-header mr-card__header">
+											<span>Em produção</span>
+											<a href="{URL}/plataforma-de-artes/solicitacoes-em-producao">
+												Ver todas
+												<i class="fa-solid fa-chevron-right blue-icon"></i>
+											</a>
+										</h3>
+										<div class="card-body mr-card__body">
+											<div class="row">
+												<!-- Incoming -->
+												<div class="col-6">
+													<div class="card mr-card__body__item"
+														id="arts-platform-incoming">
+														<div class="card-body">
+															<p>Entrada</p>
+															<span class="in-production">23</span>
+														</div>
+													</div>
+												</div>
+
+												<!-- In Creation -->
+												<div class="col-6">
+													<div class="card mr-card__body__item"
+														id="arts-platform-in-creation">
+														<div class="card-body">
+															<p>Em criação</p>
+															<span class="in-production">6</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<!-- Under Review -->
+												<div class="col-6">
+													<div class="card mr-card__body__item"
+														id="arts-platform-under-review">
+														<div class="card-body">
+															<p>Em revisão</p>
+															<span class="in-production">1</span>
+														</div>
+													</div>
+												</div>
+
+												<!-- In Completion -->
+												<div class="col-6">
+													<div class="card mr-card__body__item"
+														id="arts-platform-in-completion">
+														<div class="card-body">
+															<p>Em finalização</p>
+															<span class="in-production">1</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<!-- Finished -->
+												<div class="col-6">
+													<div class="card mr-card__body__item"
+														id="arts-platform-finished">
+														<div class="card-body">
+															<p>Entregues</p>
+															<span class="in-production">58</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Last Requests -->
+								<div class="col-7">
+									<div class="card mr-card mr-last-requests" id="last-requests">
+										<h3 class="card-header mr-card__header">
+											Últimas solicitações
+										</h3>
+										<div class="card-body mr-card__body">
+											<a href="#">
+												<div class="card mr-last-requests-item">
+													<h4 class="card-header mr-last-requests-item__header">
+														<span class="on-approval">308 &bull;</span> Fachada em lona
+													</h4>
+													<div class="card-body mr-last-requests-item__body">
+														<span class="on-approval">Distribuidor</span>
+														<p>Palácio</p>
+													</div>
+													<div class="card-footer mr-last-requests-item__footer">
+														<span class="badge on-approval">
+															Em aprovação
+														</span>
+														<div>
+															<p>
+																<i class="fa-solid fa-paperclip fa-xs"></i>
+																<span>3</span>
+															</p>
+															<p>
+																<i class="fa-regular fa-message fa-xs"></i>
+																<span>19</span>
+															</p>
+														</div>
+													</div>
+												</div>
+											</a>
+
+											<a href="#">
+												<div class="card mr-last-requests-item">
+													<h4 class="card-header mr-last-requests-item__header">
+														<span class="in-production">308 &bull;</span> Fachada em lona
+													</h4>
+													<div class="card-body mr-last-requests-item__body">
+														<span class="in-production">Distribuidor</span>
+														<p>Palácio</p>
+													</div>
+													<div class="card-footer mr-last-requests-item__footer">
+														<span class="badge in-production">
+															Em finalização
+														</span>
+														<div>
+															<p>
+																<i class="fa-solid fa-paperclip fa-xs"></i>
+																<span>3</span>
+															</p>
+															<p>
+																<i class="fa-regular fa-message fa-xs"></i>
+																<span>19</span>
+															</p>
+														</div>
+													</div>
+												</div>
+											</a>
+
+											<a href="#">
+												<div class="card mr-last-requests-item">
+													<h4 class="card-header mr-last-requests-item__header">
+														<span class="in-adjustments">308 &bull;</span> Fachada em lona
+													</h4>
+													<div class="card-body mr-last-requests-item__body">
+														<span class="in-adjustments">Distribuidor</span>
+														<p>Palácio</p>
+													</div>
+													<div class="card-footer mr-last-requests-item__footer">
+														<span class="badge in-adjustments">
+															Em ajustes
+														</span>
+														<div>
+															<p>
+																<i class="fa-solid fa-paperclip fa-xs"></i>
+																<span>3</span>
+															</p>
+															<p>
+																<i class="fa-regular fa-message fa-xs"></i>
+																<span>19</span>
+															</p>
+														</div>
+													</div>
+												</div>
+											</a>
+
+											<a href="#">
+												<div class="card mr-last-requests-item">
+													<h4 class="card-header mr-last-requests-item__header">
+														<span class="in-production">308 &bull;</span> Fachada em lona
+													</h4>
+													<div class="card-body mr-last-requests-item__body">
+														<span class="in-production">Distribuidor</span>
+														<p>Palácio</p>
+													</div>
+													<div class="card-footer mr-last-requests-item__footer">
+														<span class="badge in-production">
+															Entregue
+														</span>
+														<div>
+															<p>
+																<i class="fa-solid fa-paperclip fa-xs"></i>
+																<span>3</span>
+															</p>
+															<p>
+																<i class="fa-regular fa-message fa-xs"></i>
+																<span>19</span>
+															</p>
+														</div>
+													</div>
+												</div>
+											</a>
+
+											<a href="#">
+												<div class="card mr-last-requests-item">
+													<h4 class="card-header mr-last-requests-item__header">
+														<span class="in-production">308 &bull;</span> Fachada em lona
+													</h4>
+													<div class="card-body mr-last-requests-item__body">
+														<span class="in-production">Distribuidor</span>
+														<p>Palácio</p>
+													</div>
+													<div class="card-footer mr-last-requests-item__footer">
+														<span class="badge in-production">
+															Entregue
+														</span>
+														<div>
+															<p>
+																<i class="fa-solid fa-paperclip fa-xs"></i>
+																<span>3</span>
+															</p>
+															<p>
+																<i class="fa-regular fa-message fa-xs"></i>
+																<span>19</span>
+															</p>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+								<!-- End Last Requests -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Collections -->
+				<div class="mr-collections">
+					<div class="card mr-main-card" id="collections">
+						<h2 class="card-header mr-main-card__header">
+							Coleções
+						</h2>
+						<div class="card-body mr-main-card__body">
+							<div class="mr-collections-item">
+								<button type="button" class="btn dropdown-toggle"
+									data-bs-toggle="dropdown"
+									aria-expanded="false">
+									<i class="fa-solid fa-ellipsis"></i>
+								</button>
+								<ul class="dropdown-menu dropdown-menu-end">
+									<li>
+										<a class="dropdown-item" href="#">Abrir</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">Baixar artes</a>
+									</li>
+									<li>
+										<hr class="dropdown-divider">
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">Mover coleção</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">Renomear coleção</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#"
+											data-bs-toggle="modal"
+											data-bs-target="#modal-delete-collection-1">
+											Excluir coleção
+										</a>
+									</li>
+								</ul>
+								<a href="#">
+									<div class="mr-collections-item__images">
+										<figure>
+											<img src="{URL_IMG}/image.jpg" alt="Image 1">
+											<img src="{URL_IMG}/image.jpg" alt="Image 2">
+										</figure>
+									</div>
+									<p class="mr-collections-item__description">
+										Automotivas <span>(19)</span>
+									</p>
+								</a>
+
+								<!-- Modal delete -->
+								<div class="modal fade mr-modal-delete"
+									id="modal-delete-collection-1"
+									tabindex="-1"
+									aria-labelledby="modalDeleteCollection1Label"
+									aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered mr-modal-delete__wrapper">
+										<div class="modal-content mr-modal-delete__content">
+											<div class="modal-body mr-modal-delete__body">
+												<img src="{URL_IMG}/icon-modal-delete.svg"
+													alt="Ícone do modal de exclusão">
+												<h2>
+													Deseja realmente excluir a coleção <p>"<span>Automotivas</span>"?</p>
+												</h2>
+												<p>
+													Lembre-se de que todos as artes dessa coleção também serão excluídas.
+												</p>
+											</div>
+											<div class="modal-footer mr-modal-delete__footer">
+												<button type="button"
+													class="btn mr-button mr-button__type-2 mr-button__grey" 
+													data-bs-dismiss="modal">
+													Cancelar
+												</button>
+												<button type="button"
+													class="btn mr-button mr-button__type-2 mr-button__red">
+													Confirmar
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="mr-collections-item">
+								<button type="button" class="btn dropdown-toggle"
+									data-bs-toggle="dropdown"
+									aria-expanded="false">
+									<i class="fa-solid fa-ellipsis"></i>
+								</button>
+								<ul class="dropdown-menu dropdown-menu-end">
+									<li>
+										<a class="dropdown-item" href="#">Abrir</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">Baixar artes</a>
+									</li>
+									<li>
+										<hr class="dropdown-divider">
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">Mover coleção</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">Renomear coleção</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#"
+											data-bs-toggle="modal"
+											data-bs-target="#modal-delete-collection-2">
+											Excluir coleção
+										</a>
+									</li>
+								</ul>
+								<a href="#">
+									<div class="mr-collections-item__images">
+										<figure>
+											<img src="{URL_IMG}/image.jpg" alt="Image 1">
+											<img src="{URL_IMG}/image.jpg" alt="Image 2">
+										</figure>
+									</div>
+									<p class="mr-collections-item__description">
+										Motos <span>(23)</span>
+									</p>
+								</a>
+
+								<!-- Modal delete -->
+								<div class="modal fade mr-modal-delete"
+									id="modal-delete-collection-2"
+									tabindex="-1"
+									aria-labelledby="modalDeleteCollection2Label"
+									aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered mr-modal-delete__wrapper">
+										<div class="modal-content mr-modal-delete__content">
+											<div class="modal-body mr-modal-delete__body">
+												<img src="{URL_IMG}/icon-modal-delete.svg"
+													alt="Ícone do modal de exclusão">
+												<h2>
+													Deseja realmente excluir a coleção <p>"<span>Motos</span>"?</p>
+												</h2>
+												<p>
+													Lembre-se de que todos as artes dessa coleção também serão excluídas.
+												</p>
+											</div>
+											<div class="modal-footer mr-modal-delete__footer">
+												<button type="button"
+													class="btn mr-button mr-button__type-2 mr-button__grey" 
+													data-bs-dismiss="modal">
+													Cancelar
+												</button>
+												<button type="button"
+													class="btn mr-button mr-button__type-2 mr-button__red">
+													Confirmar
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="mr-collections-item">
+								<button type="button" class="btn dropdown-toggle"
+									data-bs-toggle="dropdown"
+									aria-expanded="false">
+									<i class="fa-solid fa-ellipsis"></i>
+								</button>
+								<ul class="dropdown-menu dropdown-menu-end">
+									<li>
+										<a class="dropdown-item" href="#">Abrir</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">Baixar artes</a>
+									</li>
+									<li>
+										<hr class="dropdown-divider">
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">Mover coleção</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#">Renomear coleção</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#"
+											data-bs-toggle="modal"
+											data-bs-target="#modal-delete-collection-3">
+											Excluir coleção
+										</a>
+									</li>
+								</ul>
+								<a href="#">
+									<div class="mr-collections-item__images">
+										<figure>
+											<img src="{URL_IMG}/image.jpg" alt="Image 1">
+											<img src="{URL_IMG}/image.jpg" alt="Image 2">
+										</figure>
+									</div>
+									<p class="mr-collections-item__description">
+										Industriais <span>(8)</span>
+									</p>
+								</a>
+
+								<!-- Modal delete -->
+								<div class="modal fade mr-modal-delete"
+									id="modal-delete-collection-3"
+									tabindex="-1"
+									aria-labelledby="modalDeleteCollection3Label"
+									aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered mr-modal-delete__wrapper">
+										<div class="modal-content mr-modal-delete__content">
+											<div class="modal-body mr-modal-delete__body">
+												<img src="{URL_IMG}/icon-modal-delete.svg"
+													alt="Ícone do modal de exclusão">
+												<h2>
+													Deseja realmente excluir a coleção <p>"<span>Industriais</span>"?</p>
+												</h2>
+												<p>
+													Lembre-se de que todos as artes dessa coleção também serão excluídas.
+												</p>
+											</div>
+											<div class="modal-footer mr-modal-delete__footer">
+												<button type="button"
+													class="btn mr-button mr-button__type-2 mr-button__grey" 
+													data-bs-dismiss="modal">
+													Cancelar
+												</button>
+												<button type="button"
+													class="btn mr-button mr-button__type-2 mr-button__red">
+													Confirmar
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Collections -->
+			</div>
+		</div>
+	</main>
+
+	{INCLUDE_JAVASCRIPT}
+</body>
+</html>

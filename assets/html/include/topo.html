@@ -17,8 +17,8 @@
 				<span>RM CENTRAL</span>
 			</div>
 			<button class="header__profile-button" type="button">
-				<div class="header__profile-image">
-					<img src="{URL_IMG}/profile-img.png" alt="Image profile" />
+				<div class="header__profile-image header__profile-image__admin">
+					<span>DN</span>
 				</div>
 				<i class="fa-solid fa-chevron-down"></i>
 			</button>
@@ -100,10 +100,10 @@
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a class="active" href="{URL}/plataforma-de-artes">
 							<div>
-								<span>Plataforma de artes</span>
-								<div class="soon">Em breve</div>
+								<span>Plataforma de Artes</span>
+								<i class="fa-solid fa-chevron-right"></i>
 							</div>
 						</a>
 					</li>
@@ -111,4 +111,131 @@
 			</nav>
 		</div>
 	</div>
+
+	<!-- NAVBAR -->
+	<nav class="header__navbar">
+		<div>
+			<div class="header__navbar-title">
+				<h2></h2>
+			</div>
+			<div class="header__navbar-wrapper">
+				<!-- Energia Premiada -->
+				<ul class="header__navbar-list"
+					data-navbar="energia-premiada">
+					<li>
+						<a href="{URL}/energia-premiada" class="active">Sell in</a>
+					</li>
+					<li>
+						<a href="{URL}/energia-premiada/sell-out">Sell out</a>
+					</li>
+					<li>
+						<a href="{URL}/energia-premiada/participantes">Participantes</a>
+					</li>
+					<li>
+						<a href="{URL}/energia-premiada/premiacao">Premiação</a>
+					</li>
+				</ul>
+
+				<!-- Plataforma de Artes -->
+				<ul class="header__navbar-list"
+					data-navbar="plataforma-de-artes">
+					<li>
+						<a href="{URL}/plataforma-de-artes" class="active">Home</a>
+					</li>
+					<li>
+						<a href="{URL}/plataforma-de-artes/solicitacoes-dos-clientes">Solicitações dos Clientes</a>
+					</li>
+					<li>
+						<a href="{URL}/plataforma-de-artes/solicitacoes-em-producao">Solicitações em Produção</a>
+					</li>
+					<!-- <li>
+						<a href="{URL}/plataforma-de-artes/minhas-solicitacoes">Minhas Solicitações</a>
+					</li> -->
+					<li>
+						<a href="{URL}/plataforma-de-artes/colecoes">Coleções</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Notifications -->
+		<!-- AJUSTAR HOVER NO ÍCONE -->
+		<div class="header__navbar-notifications">
+			<button class="btn" type="button"
+				data-bs-toggle="offcanvas"
+				data-bs-target="#notifications"
+				aria-controls="notifications">
+				<i class="fa-solid fa-bell fa-lg"></i>
+
+				<span class="badge rounded-circle bg-danger">
+					<span class="visually-hidden">Notificações não lidas</span>
+				</span>
+			</button>
+
+			<div class="offcanvas offcanvas-end header__navbar-notifications__wrapper" tabindex="-1" id="notifications"
+				aria-labelledby="notificationsLabel">
+				<div class="offcanvas-header">
+					<button type="button" class="btn-close"
+						data-bs-dismiss="offcanvas"
+						aria-label="Close"></button>
+				</div>
+				<div class="offcanvas-body">
+					<h2 class="header__navbar-notifications__title">Notificações</h2>
+
+					<div class="header__navbar-notifications__item mr-notification-unread">
+						<h3>
+							<span class="badge rounded-circle">
+								<span class="visually-hidden">Notificação não lida</span>
+							</span>
+							<span>Nova solicitação para aprovação</span>
+						</h3>
+						<div>
+							<span>
+								04/01/2024 &bull; 08h54
+							</span>
+							<p>
+								The quick brown fox jumps over the lazy gray dog. The quick brown fox jumps over the lazy gray dog. The quick brown fox jumps over the lazy gray dog.
+								<a href="#">Ver mais</a>
+							</p>
+						</div>
+					</div>
+					<div class="header__navbar-notifications__item mr-notification-unread">
+						<h3>
+							<span class="badge rounded-circle">
+								<span class="visually-hidden">Notificação não lida</span>
+							</span>
+							<span>Nova solicitação para aprovação</span>
+						</h3>
+						<div>
+							<span>
+								04/01/2024 &bull; 08h54
+							</span>
+							<p>
+								The quick brown fox jumps over the lazy gray dog. The quick brown fox jumps over the lazy gray dog. The quick brown fox jumps over the lazy gray dog.
+								<a href="#">Ver mais</a>
+							</p>
+						</div>
+					</div>
+					<div class="header__navbar-notifications__item mr-notification-readed">
+						<h3>
+							<span class="badge rounded-circle">
+								<span class="visually-hidden">Notificação não lida</span>
+							</span>
+							<span>Nova solicitação para aprovação</span>
+						</h3>
+						<div>
+							<span>
+								04/01/2024 &bull; 08h54
+							</span>
+							<p>
+								The quick brown fox jumps over the lazy gray dog. The quick brown fox jumps over the lazy gray dog. The quick brown fox jumps over the lazy gray dog.
+								<a href="#">Ver mais</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<!-- END NAVBAR -->
 </header>

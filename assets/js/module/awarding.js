@@ -26,7 +26,7 @@ const configChartAwardingSellIn = {
       },
       {
         label: "JAN/22",
-        data: [5, 9, 17, 16, 19, 25, 29, 25, 32],
+        data: [5, 9, 17, 16, 19, 25, 29, 25],
         borderWidth: 1,
         borderColor: COLORS.gray,
         backgroundColor: COLORS.gray,
@@ -63,7 +63,7 @@ const configChartAwardingSellOut = {
       },
       {
         label: "JAN/22",
-        data: [5, 9, 17, 16, 19, 25, 29, 25, 32],
+        data: [5, 9, 17, 16, 19, 25, 29, 25],
         borderWidth: 1,
         borderColor: COLORS.gray,
         backgroundColor: COLORS.gray,
@@ -80,3 +80,5 @@ const chartAwardingSellOut = renderChart(
   ctxChartAwardingSellOut,
   configChartAwardingSellOut
 );
+
+window.submitAsideFilter = () => {}

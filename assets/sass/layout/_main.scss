@@ -6,4 +6,12 @@
   position: relative;
   background-color: var(--color-white-smoke);
   flex-grow: 1;
+  margin-top: 10.486rem;
+
+  &.login-page,
+  &.forgot-password-page,
+  &.maintenance-page,
+  &.not-found-page {
+    margin-top: 0;
+  }
 }

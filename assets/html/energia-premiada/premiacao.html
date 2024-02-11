@@ -4,6 +4,7 @@
 	{INCLUDE_CABECALHO}
 	<title itemprop="name">Energia Premiada - Premiação</title>
 	<link rel="canonical" href="{URL}/energia-premiada/awarding" itemprop="url" />
+	<meta name="page" content="energia-premiada" />
 	<meta name="description" content="{OBJ_METADATA->DESCRIPTION}" />
 	<meta name="keywords" content="{OBJ_METADATA->KEYWORD}" />
 	<meta name="twitter:card" content="summary_large_image" />
@@ -21,30 +22,7 @@
 <body>
 	{INCLUDE_TOPO}
 	<main class="main">
-		<!-- NAVBAR -->
-		<nav class="header__navbar">
-			<div class="header__navbar-title">
-				<h2>Energia premiada</h2>
-			</div>
-			<div class="header__navbar-wrapper">
-				<ul class="header__navbar-list">
-					<li>
-						<a href="{URL}/energia-premiada/">Sell in</a>
-					</li>
-					<li>
-						<a href="{URL}/energia-premiada/sell-out">Sell out</a>
-					</li>
-					<li>
-						<a href="{URL}/energia-premiada/participantes">Participantes</a>
-					</li>
-					<li>
-						<a class="active" href="javascript:;">Premiação</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-		<!-- END NAVBAR -->
-		<div class="container">
+		<div class="mr-container">
 			<div class="content">
 				<!-- SELL IN -->
 				<div class="grid-wrapper">
@@ -189,63 +167,44 @@
 								</a>
 							</div>
 							<p>
-								Comparativo da premiação distribuída para revendas (Sell In),
-								gerentes e balconistas (Sell Out) por grupos e distribuidores
-								ou distribuidores e revendas que participam do programa no mês
-								mais recente do período selecionado
+								Comparativo da premiação distribuída para revendas (Sell In), gerentes e balconistas (Sell Out) por grupos e distribuidores ou distribuidores e revendas que participam do programa no mês mais recente do período selecionado
 							</p>
 						</div>
+
 						<!-- TABLE FILTER -->
 						<div class="table-filter">
-							<form action="#">
+							<form action="#" method="POST" id="form-table-filter">
+								<!-- View by -->
 								<div class="aside-filter__group flex-1">
-									<label class="color-lighting-yellow" for="view-by">Visualizar por</label>
+									<label class="color-lighting-yellow" for="filter-view-by">Visualizar por</label>
 									<div class="custom-select__wrapper">
-										<div class="custom-select__button input-custom bg-white-smoke">
-											<input type="text" id="view-by" name="view-by"
-												value="Distribuidores e revendas" readonly />
-											<div class="custom-select__chevrons">
-												<i class="fa-solid fa-chevron-down color-lighting-yellow"
-													aria-hidden="true"></i>
-												<i class="fa-solid fa-chevron-up color-lighting-yellow"
-													aria-hidden="true"></i>
-											</div>
-										</div>
-										<div class="custom-select__content">
-											<div class="custom-select__options">
-												<span class="custom-select__option selected" data-value="1">Grupos e
-													distribuidores</span>
-												<span class="custom-select__option" data-value="2">Distribuidores e
-													revendas</span>
-											</div>
-										</div>
+										<select class="custom-select__item no-search"
+											id="filter-view-by"
+											name="filter-view-by">
+											<option value="grupos-distribuidores" selected>
+												Grupos e distribuidores
+											</option>
+											<option value="ano-atual">Distribuidores e revendas</option>
+										</select>
 									</div>
 								</div>
+
+								<!-- Order by -->
 								<div class="aside-filter__group flex-1">
-									<label class="color-lighting-yellow" for="order-by">Ordernar por</label>
+									<label class="color-lighting-yellow" for="filter-order-by">Ordernar por</label>
 									<div class="custom-select__wrapper">
-										<div class="custom-select__button input-custom bg-white-smoke">
-											<input type="text" id="order-by" name="order-by" value="Número total"
-												readonly />
-											<div class="custom-select__chevrons">
-												<i class="fa-solid fa-chevron-down color-lighting-yellow"
-													aria-hidden="true"></i>
-												<i class="fa-solid fa-chevron-up color-lighting-yellow"
-													aria-hidden="true"></i>
-											</div>
-										</div>
-										<div class="custom-select__content">
-											<div class="custom-select__options">
-												<span class="custom-select__option selected" data-value="1">Número
-													total</span>
-												<span class="custom-select__option" data-value="2">Evolução</span>
-											</div>
-										</div>
+										<select class="custom-select__item no-search"
+											id="filter-order-by"
+											name="filter-order-by">
+											<option value="numero-total" selected>Número total</option>
+											<option value="evolucao">Evolução</option>
+										</select>
 									</div>
 								</div>
 							</form>
 						</div>
 						<!-- END TABLE FILTER -->
+						
 						<!-- TABLE -->
 						<div class="grid-wrapper__table-wrapper">
 							<table class="table">
@@ -253,14 +212,18 @@
 									<tr class="table__head-tr">
 										<th class="table__head-th"></th>
 										<th class="table__head-th">
-											<div class="table__head-th-title-wrapper">
-												<div class="table__head-th-title-custom active">
+											<div class="table__head-th-title-wrapper" 
+												id="table-participant-details-buttons">
+												<div class="table__head-th-title-custom active"
+													onclick="return window.changeAwardingTable(this)">
 													Revendas
 												</div>
-												<div class="table__head-th-title-custom">
+												<div class="table__head-th-title-custom"
+													onclick="return window.changeAwardingTable(this)">
 													Gerentes
 												</div>
-												<div class="table__head-th-title-custom">
+												<div class="table__head-th-title-custom"
+													onclick="return window.changeAwardingTable(this)">
 													Balconistas
 												</div>
 											</div>
@@ -597,13 +560,19 @@
 											</div>
 										</td>
 									</tr>
-									<tr class="table__body-tr">
+									<tr class="table__body-tr table__footer">
 										<th class="table__body-th">Total</th>
 										<td class="table__body-td">
 											<div class="table__body-td-content">
-												<div><span>9</span></div>
-												<div><span>9</span></div>
-												<div><span class="rectangle-gray">0%</span></div>
+												<div>
+													<span>9</span>
+												</div>
+												<div>
+													<span>9</span>
+												</div>
+												<div>
+													<span class="rectangle-gray">0%</span>
+												</div>
 											</div>
 										</td>
 									</tr>
@@ -620,5 +589,6 @@
 	</main>
 	{INCLUDE_JAVASCRIPT}
 	<script type="module" src="{URL_JS}/module/awarding.js"></script>
+	<script type="module" src="{URL_JS}/module/calendar-month.js"></script>
 </body>
 </html>

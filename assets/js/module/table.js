@@ -12,3 +12,11 @@ window.addEventListener("click", function (e) {
     }
   }
 });
+
+/** Change Participant Details table view */
+window.changeAwardingTable = (el) => {
+  const participantsDetailsButtons =  document.querySelectorAll("#table-participant-details-buttons div");
+
+  participantsDetailsButtons.forEach((button) => button.classList.remove("active"));
+  el.classList.add("active");
+}

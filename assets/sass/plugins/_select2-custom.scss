@@ -1,0 +1,104 @@
+@use "../base/sizes" as *;
+@use "../base/space" as *;
+@use "../base/border" as *;
+
+// Select 2
+.select2-container {
+  width: 100% !important;
+
+  & .select2-selection {
+    height: 40px;
+    padding: 0 $space-15;
+    @include border-small(var(--color-white));
+    border-radius: $radius-large !important;
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease-out;
+
+    &__rendered {
+      color: var(--color-black) !important;
+      line-height: 40px !important;
+      font-family: "Poppins", sans-serif;
+      @include size-12;
+      padding: 0 15px 0 0 !important;
+    }
+  }
+
+  .select2-dropdown {
+    margin-top: $space-10;
+    border: none;
+    background-color: var(--color-black);
+    border-radius: $radius-large;
+
+    .select2-search--dropdown {
+      padding: $space-15 $space-15 $space-10 $space-15;
+
+      input {
+        @include size-12;
+        border: none;
+        border-radius: 5px;
+        padding: $space-10 $space-24 $space-10 $space-10;
+        background: var(--color-white) url("../images/search-icon.svg") no-repeat 94% center;
+      }
+    }
+  
+    .select2-results {
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-black);
+      }
+
+      /* Works on Chrome, Edge, and Safari */
+      *::-webkit-scrollbar {
+        width: 0.625rem;
+      }
+
+      *::-webkit-scrollbar-track {
+        background: var(--color-black);
+      }
+
+      *::-webkit-scrollbar-thumb {
+        background: var(--color-white);
+        border-radius: 1.25rem;
+        border: 3px solid var(--color-white);
+      }
+
+      &__option {
+        @include size-12;
+        color: var(--color-white);
+        padding: $space-4 $space-15;
+        margin: $space-4 0;
+
+        &:first-of-type {
+          margin-top: $space-8;
+        }
+
+        &:last-of-type {
+          margin-bottom: $space-8;
+        }
+
+        &--selected {
+          background-color: transparent;
+          font-weight: 700;
+        }
+
+        &--highlighted {
+          background-color: transparent;
+          color: var(--color-lighting-yellow);
+        }
+      }
+    }
+  }
+
+  &--open {
+    & .select2-selection {
+      @include border-small(var(--color-science-blue));
+      transition: 0.3s ease-in;
+
+      .select2-selection__arrow {
+        transform: translateY(-50%) rotate(180deg);
+        transition: 0.3s ease-out;
+      }
+    }
+  }
+}

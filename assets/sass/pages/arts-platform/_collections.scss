@@ -1,0 +1,93 @@
+// | -------------------------------------------------------------
+// | Collections Page
+// | -------------------------------------------------------------
+
+@use "../../base/sizes" as *;
+@use "../../base/space" as *;
+
+.page-collections {
+  .colletion-gap {
+    gap: 30px;
+  }
+
+  .mr-collection {
+    width: 930px;
+  }
+
+  .mr-main-card__header {
+    padding: 0 0 30px 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mr-main-card__header-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .mr-main-card__header__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    .mr-main-card__options {
+      button {
+        width: 60px;
+        height: 30px;
+        border: none;
+        outline: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        &::after {
+          display: none;
+        }
+
+        &:hover {
+          background-color: var(--color-white-smoke);
+        }
+
+        &.show,
+        &:active {
+          border-color: transparent;
+        }
+
+        i {
+          color: var(--color-lemon-grass);
+          transition: 0.1s ease-out;
+        }
+      }
+    }
+
+    ul {
+      background-color: var(--color-black);
+      border-radius: 10px;
+      margin-top: 10px !important;
+      margin-right: -3px !important;
+
+      li {
+        margin: $space-4 0 !important;
+
+        a {
+          @include size-12;
+          color: var(--color-white);
+          padding: $space-4 $space-15 !important;
+
+          &:hover {
+            background-color: transparent;
+            color: $color-lighting-yellow;
+          }
+        }
+      }
+    }
+  }
+
+  .mr-collections-item {
+    width: 270px;
+    margin-top: 40px !important;
+  }
+}

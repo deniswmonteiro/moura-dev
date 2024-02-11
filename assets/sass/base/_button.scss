@@ -18,13 +18,94 @@
   text-transform: uppercase;
   border: none;
   border-radius: var(--radius-large);
-  @include transition(all, 0.3s, ease-in-out);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: .3s ease-out;
 
   &:hover {
     background-color: var(--color-royal-azure);
+    transition: .3s ease-in;
+  }
+}
+
+.mr-button {
+  font-family: "Poppins", sans-serif;
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-large);
+  transition: .3s ease-out;
+
+  &__type-1 {
+    @include size-10;
+    padding: 8px 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__type-2 {
+    @include size-12;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+
+  &__type-3 {
+    @include size-12;
+    font-weight: 700;
+    width: 100%;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+
+  &__blue {
+    background-color: var(--color-science-blue);
+    
+    &:hover,
+    &:active,
+    &.active {
+      background-color: var(--color-royal-azure) !important;
+      color: var(--color-white) !important;
+      transition: .3s ease-in;
+    }
+  }
+
+  &__grey {
+    background-color: var(--color-lemon-grass);
+    
+    &:hover,
+    &:active,
+    &.active {
+      background-color: var(--color-ironside-grey) !important;
+      color: var(--color-white) !important;
+      transition: .3s ease-in;
+    }
+  }
+
+  &__red {
+    background-color: var(--color-rosso-corsa);
+
+    &:hover,
+    &:active,
+    &.active {
+      background-color: var(--color-red-dark) !important;
+      color: var(--color-white) !important;
+      transition: .3s ease-in;
+    }
+  }
+
+  &__black {
+    background-color: var(--color-black);
+
+    &:hover,
+    &:active,
+    &.active {
+      background-color: var(--color-science-blue) !important;
+      color: var(--color-white) !important;
+      transition: .3s ease-in;
+    }
   }
 }

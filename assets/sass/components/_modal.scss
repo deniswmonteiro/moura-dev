@@ -26,16 +26,16 @@ $color-lemon-grass: var(--color-lemon-grass);
   justify-content: center;
 
   // modal content
-
   &__content {
     max-width: 100%;
     max-height: 100%;
     width: 930px;
-    height: 519px;
+    height: 600px;
     margin: auto;
     padding: $space-30;
     background-color: $color-white;
     border-radius: var(--radius-large);
+    overflow-y: auto;
   }
 
   // modal header
@@ -128,7 +128,7 @@ $color-lemon-grass: var(--color-lemon-grass);
     height: 20px;
     background-color: transparent;
     border: none;
-    background-image: url(../images/icon-search-modal.png);
+    background-image: url("../images/search-icon.svg");
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -137,5 +137,48 @@ $color-lemon-grass: var(--color-lemon-grass);
   // table
   &__table {
     margin-top: $space-30;
+  }
+}
+
+.mr-modal-delete {
+  &__wrapper {
+    max-width: 600px;
+  }
+
+  &__content {
+    border: none;
+  }
+
+  &__body {
+    text-align: center;
+    padding: 30px;
+
+    & > img {
+      margin-bottom: 15px;
+    }
+
+    & > h2 {
+      @include size-18;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    & > p {
+      @include size-12;
+      color: var(--color-ironside-grey);
+    }
+  }
+
+  &__footer {
+    padding: 0 30px 30px 30px;
+    gap: 30px;
+    border-top: none;
+
+    button {
+      margin: 0;
+      width: calc(50% - 15px);
+      @include size-12;
+      font-weight: 700;
+    }
   }
 }

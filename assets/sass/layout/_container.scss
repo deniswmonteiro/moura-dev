@@ -4,10 +4,14 @@
 
 @use "../base/breakpoint" as *;
 
-.container {
+.mr-container {
   padding: 0 88px;
 
   @include breakpoint(medium) {
     padding: 0 1rem;
   }
+}
+
+.mr-no-container {
+  padding: 30px;
 }

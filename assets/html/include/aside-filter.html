@@ -1,167 +1,105 @@
 <aside class="aside-filter">
-  <form class="aside-filter__form" action="#">
+  <form action="#" method="POST" class="aside-filter__form"
+    id="custom-form">
+    <!-- Period -->
     <div class="aside-filter__group">
-      <label class="color-science-blue" for="period">Período</label>
+      <label class="color-science-blue" for="filter-period">Período</label>
       <div class="custom-select__wrapper">
-        <div class="custom-select__button input-custom bg-white">
-          <input type="text"
-            id="period"
-            name="period"
-            value="Mês atual"
-            readonly />
-          <div class="custom-select__chevrons">
-            <i class="fa-solid fa-chevron-down color-science-blue"
-              aria-hidden="true">
-            </i>
-            <i class="fa-solid fa-chevron-up color-science-blue"
-              aria-hidden="true">
-            </i>
-          </div>
-        </div>
-        <div class="custom-select__content">
-          <div class="custom-select__options">
-            <span class="custom-select__option selected" data-value="mes-atual">Mês atual</span>
-            <span class="custom-select__option" data-value="ano-atual">Ano atual</span>
-            <span class="custom-select__option" data-value="3-mes">Últimos 3 meses</span>
-            <span class="custom-select__option" data-value="6-mes">Últimos 6 meses</span>
-            <span class="custom-select__option" data-value="12-mes">Últimos 12 meses</span>
-            <span class="custom-select__option" data-value="personalizado">Intervalo personalizado</span>
-          </div>
-        </div>
-      </div>
-      <div class="custom-select__date-wrapper">
-        <div class="custom-select__date-input bg-white">
-          <input id="calendar-date-1"
-            type="text"
-            placeholder="Escolha"
-            value=""
-            readonly />
-          <img src="{URL_IMG}/icon-input-date.png" alt="Icone Date" />
-        </div>
-        <div class="custom-select__date-input bg-white">
-          <input id="calendar-date-2"
-            type="text"
-            placeholder="Escolha"
-            value=""
-            readonly />
-          <img src="{URL_IMG}/icon-input-date.png" alt="Icone Date" />
-        </div>
+        <select class="custom-select__item no-search"
+          id="filter-period"
+          name="filter-period"
+          onchange="return window.changeFilterCustomPeriod(this)"
+          onblur="return window.changeFilterCustomPeriod(this)">
+          <option value="mes-atual">Mês atual</option>
+          <option value="ano-atual" selected>Ano atual</option>
+          <option value="3-mes">Últimos 3 meses</option>
+          <option value="6-mes">Últimos 6 meses</option>
+          <option value="12-mes">Últimos 12 meses</option>
+          <option value="personalizado">Intervalo personalizado</option>
+        </select>
       </div>
     </div>
-    <div class="aside-filter__group">
-      <label class="color-science-blue" for="group">Grupo</label>
-      <div class="custom-select__wrapper">
-        <div class="custom-select__button input-custom bg-white">
-          <input type="text" id="group" name="group" value="Todos" readonly />
-          <div class="custom-select__chevrons">
-            <i class="fa-solid fa-chevron-down color-science-blue"
-              aria-hidden="true">
-            </i>
-            <i class="fa-solid fa-chevron-up color-science-blue"
-              aria-hidden="true">
-            </i>
-          </div>
-        </div>
-        <div class="custom-select__content">
-          <div class="custom-select__options">
-            <span class="custom-select__option selected" data-value="1">Todos</span>
-            <span class="custom-select__option" data-value="2">Grupo 1</span>
-            <span class="custom-select__option" data-value="3">Grupo 2</span>
-            <span class="custom-select__option" data-value="4">Grupo 3</span>
-          </div>
-        </div>
+
+    <div class="custom-select__date-wrapper" id="custom-period-date">
+      <div class="custom-select__date-input bg-white">
+        <input type="text" id="calendar-date-1"
+          readonly />
+      </div>
+      <div class="custom-select__date-input bg-white">
+        <input type="text" class="disabled"
+          id="calendar-date-2"
+          readonly
+          disabled />
       </div>
     </div>
+
+    <!-- Group -->
     <div class="aside-filter__group">
-      <label class="color-science-blue" for="distributor">Distribuidor</label>
+      <label class="color-science-blue" for="filter-group">Grupo</label>
       <div class="custom-select__wrapper">
-        <div class="custom-select__button input-custom bg-white">
-          <input type="text"
-            id="distributor"
-            name="distributor"
-            value="Todos"
-            readonly />
-          <div class="custom-select__chevrons">
-            <i class="fa-solid fa-chevron-down color-science-blue"
-              aria-hidden="true">
-            </i>
-            <i class="fa-solid fa-chevron-up color-science-blue"
-              aria-hidden="true">
-            </i>
-          </div>
-        </div>
-        <div class="custom-select__content">
-          <div class="custom-select__search">
-            <input type="text"
-              name="q"
-              id="q"
-              spellcheck="false"
-              placeholder="Busca pelo nome" />
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-          <div class="custom-select__options">
-            <span class="custom-select__option selected" data-value="1">Todos</span>
-            <span class="custom-select__option" data-value="2">COMAL - Filial Cachoeiro do Itapemirim (ES)</span>
-            <span class="custom-select__option" data-value="3">BONFIM (BA)</span>
-            <span class="custom-select__option" data-value="4">PALÁCIO (PE)</span>
-          </div>
-        </div>
+        <select class="custom-select__item"
+          id="filter-group"
+          name="filter-group">
+          <option value="todos" selected>Todos</option>
+          <option value="grupo-1">Grupo 1</option>
+          <option value="grupo-2">Grupo 2</option>
+          <option value="grupo-3">Grupo 3</option>
+          <option value="grupo-4">Grupo 4</option>
+          <option value="grupo-5">Grupo 5</option>
+          <option value="grupo-6">Grupo 6</option>
+        </select>
       </div>
     </div>
+
+    <!-- Distributor -->
     <div class="aside-filter__group">
-      <label class="color-science-blue" for="segment">Segmento</label>
+      <label class="color-science-blue" for="filter-distributor">Distribuidor</label>
       <div class="custom-select__wrapper">
-        <div class="custom-select__button input-custom bg-white">
-          <input type="text"
-            id="segment"
-            name="segment"
-            value="Todos"
-            readonly />
-          <div class="custom-select__chevrons">
-            <i class="fa-solid fa-chevron-down color-science-blue"
-              aria-hidden="true">
-            </i>
-            <i class="fa-solid fa-chevron-up color-science-blue"
-              aria-hidden="true">
-            </i>
-          </div>
-        </div>
-        <div class="custom-select__content">
-          <div class="custom-select__options">
-            <span class="custom-select__option selected" data-value="1">Todos</span>
-            <span class="custom-select__option" data-value="2">Segmento 1</span>
-            <span class="custom-select__option" data-value="3">Segmento 2</span>
-            <span class="custom-select__option" data-value="4">Segmento 3</span>
-          </div>
-        </div>
+        <select class="custom-select__item"
+          id="filter-distributor"
+          name="filter-distributor">
+          <option value="todos" selected>Todos</option>
+          <option value="distribuidor-1">COMAL - Filial Cachoeiro do Itapemirim (ES)</option>
+          <option value="distribuidor-2">BONFIM (BA)</option>
+          <option value="distribuidor-3">PALÁCIO (PE)</option>
+        </select>
       </div>
     </div>
+
+    <!-- Segment -->
     <div class="aside-filter__group">
-      <label class="color-science-blue" for="resale">Revenda</label>
+      <label class="color-science-blue" for="filter-segment">Segmento</label>
       <div class="custom-select__wrapper">
-        <div class="custom-select__button input-custom bg-white">
-          <input type="text" id="resale" name="resale" value="Todos" readonly />
-          <div class="custom-select__chevrons">
-            <i class="fa-solid fa-chevron-down color-science-blue"
-              aria-hidden="true">
-            </i>
-            <i class="fa-solid fa-chevron-up color-science-blue"
-              aria-hidden="true">
-            </i>
-          </div>
-        </div>
-        <div class="custom-select__content">
-          <div class="custom-select__options">
-            <span class="custom-select__option selected" data-value="1">Todos</span>
-            <span class="custom-select__option" data-value="2">Revenda 1</span>
-            <span class="custom-select__option" data-value="3">Revenda 2</span>
-            <span class="custom-select__option" data-value="4">Revenda 3</span>
-          </div>
-        </div>
+        <select class="custom-select__item"
+          id="filter-segment"
+          name="filter-segment">
+          <option value="todos" selected>Todos</option>
+          <option value="segmento-1">Segmento 1</option>
+          <option value="segmento-2">Segmento 2</option>
+          <option value="segmento-3">Segmento 3</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Resale -->
+    <div class="aside-filter__group">
+      <label class="color-science-blue" for="filter-resale">Revenda</label>
+      <div class="custom-select__wrapper">
+        <select class="custom-select__item"
+          id="filter-resale"
+          name="filter-resale">
+          <option value="todos" selected>Todos</option>
+          <option value="revenda-1">Revenda 1</option>
+          <option value="revenda-2">Revenda 2</option>
+          <option value="revenda-3">Revenda 3</option>
+        </select>
       </div>
     </div>
     <div class="aside-filter__button">
-      <button class="button-blue" type="submit">Filtrar</button>
+      <button class="btn mr-button mr-button__type-3 mr-button__blue" type="button"
+        onclick="return window.submitAsideFilter()">
+        Filtrar
+      </button>
     </div>
   </form>
 </aside>
