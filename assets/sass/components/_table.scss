@@ -257,7 +257,13 @@ thead th:nth-child(3) {
     }
 
     .table__dropdown-modal-toggle {
-      cursor: pointer;
+      padding: 0 !important;
+      width: 19px;
+      height: 19px;
+
+      &:active {
+        border-color: transparent;
+      }
     }
   }
 }
