@@ -19,7 +19,7 @@ try{
 	$template->addFile( 'INCLUDE_ASIDE', DIR_HTML . '/include/aside-filter.html' );
 
 	// Adicionando modal
-	$template->addFile( 'INCLUDE_MODAL_ENERGIA_PREMIADA', DIR_HTML . '/include/modal-energia-premiada.html' );
+	$template->addFile( 'INCLUDE_MODAL_DETALHAMENTO_CLIENTES', DIR_HTML . '/include/modal-detalhamento-clientes.html' );
 }catch( Exception ){}
 
 //Exibindo a página
